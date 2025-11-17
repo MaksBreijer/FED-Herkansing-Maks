@@ -38,16 +38,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp: https://goalden.nl/ 
+  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp: https://vandeer-redbull-sports.com/en
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   ##De Homepagina
-  <img src="readme-images/homepagina.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/Home.PNG" width="375px" alt="De homepagina Van Deer">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   
   ##De Overons pagina
-  <img src="readme-images/overonspagina.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/Boots.PNG" width="375px" alt="Skischoen product pagina">
  
 </details>
 
