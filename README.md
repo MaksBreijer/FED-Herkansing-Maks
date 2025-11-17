@@ -2,6 +2,8 @@
 Markdown is een simpele manier om HTML te schrijven.  
 Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
+Mijn website: https://maksbreijer.github.io/FED-Herkansing-Maks/
+
 Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
 
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
@@ -58,8 +60,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
- Ik kwam erachter dat de pagina vrijwel alle elementen correct uitleest, met uitzondering van een paar belangrijke onderdelen. De knoppen, video’s en carrousels worden zonder problemen herkend en verwerkt, wat erg goed werkt. Alleen bij de paragrafen gaat het mis: die worden volledig overgeslagen en niet meegenomen in het uitleesproces. Daardoor lijkt een deel van de inhoud verloren te gaan.
-
+ Ik kwam erachter dat de pagina vrijwel alle elementen correct uitleest, met uitzondering van een paar belangrijke onderdelen. De knoppen, video’s en carrousels worden zonder problemen herkend en verwerkt, wat erg goed werkt. Alleen bij de paragrafen gaat het mis: die worden volledig overgeslagen en niet meegenomen in het uitleesproces. Dit zou ik moeten aanpassen
 
 </details>
 
