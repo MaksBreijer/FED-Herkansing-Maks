@@ -41,12 +41,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp: https://goalden.nl/ 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  ##De Homepagina
+  # De Home pagina
   <img src="readme-images/homepagina.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  
-  ##De Overons pagina
+# De Over ons pagina
   <img src="readme-images/overonspagina.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
