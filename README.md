@@ -58,7 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  # Lijst met je bevindingen die in de test naar voren kwamen:
 
  Ik kwam erachter dat de pagina vrijwel alle elementen correct uitleest, met uitzondering van een paar belangrijke onderdelen. De knoppen, video’s en carrousels worden zonder problemen herkend en verwerkt, wat erg goed werkt. Alleen bij de paragrafen gaat het mis: die worden volledig overgeslagen en niet meegenomen in het uitleesproces. Dit zou ik moeten aanpassen
 
