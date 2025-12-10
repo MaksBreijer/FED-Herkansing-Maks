@@ -3,6 +3,7 @@ Markdown is een simpele manier om HTML te schrijven.
 Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 Mijn website: https://maksbreijer.github.io/FED-Herkansing-Maks/
+2de pagina: 
 
 Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
 
