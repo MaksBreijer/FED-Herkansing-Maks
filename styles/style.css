@@ -9,11 +9,6 @@ img, video {
 	  max-width:100%;
 }
 
-h1, h2, h3 ,h4 , h5, h6, p, a, li, button {
-font-family: "gotham", sans-serif;
-font-weight: 400;
-font-style: normal;
-}
 
 
 /*********************/
@@ -35,40 +30,150 @@ font-style: normal;
 
 /* jouw code */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+}
+
+p {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400;
+font-style: normal;
+color: #7f8c8d;
+}
+
+h1 {
+    position: absolute;
+    left: -9999px;
+}
+
+h3, h2, button, a {
+  color: white;
+  font-family: "gotham", sans-serif;
+}
+
+/* Hier alleen de header code */
+
 header {
     position: relative;
-    width: 100%;
     min-height: 100vh;
     overflow: hidden;
 }
 
 header video {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-}
-
-header nav {
-    position: relative;
     z-index: 1;
 }
+/* Hier alleen de header navigatie code */
 
-section {
+header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header nav img {
+    height: 35px;
+}
+
+header nav a:last-child {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-decoration: none
+}
+
+header nav a:last-child:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hier alleen de header article code */
+
+header article {
     position: relative;
-    z-index: 2;
-    background: #000;
+    z-index: 10;
+    padding: 60vh 1.5rem 0;
 }
 
-/* iPhone SE en kleine schermen */
-@media (max-width: 375px) {
-    header {
-        min-height: 100svh;
-    }
+header article > p:first-child {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
 }
-body {
-background-color: var(--color-text);color: white;
+
+header article h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    max-width: 100%;
 }
+
+header article > a {
+    display: inline-flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 3rem 1rem 1.2rem;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s;
+}
+
+header article > a::after {
+    content: '↗';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #e74c3c;
+}
+
+header article > a:hover {
+    background: white;
+    transform: translateX(10px);
+}
+
+header article h3 {
+    color: #2c3e50;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+header article > a > p {
+    color: #7f8c8d;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Hier alleen section 1 code code */
