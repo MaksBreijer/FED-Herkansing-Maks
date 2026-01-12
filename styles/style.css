@@ -24,6 +24,7 @@ video {
     --color-text-dark: #2c3e50;
     --color-background: #000000;
     --color-accent: #e74c3c;
+    --color-border: #484848;
 }
 
 /****************/
@@ -44,7 +45,7 @@ p {
     font-weight: 400;
     font-size: 0.96rem;
     letter-spacing: 0.1em;
-     line-height: 1.4em;
+    line-height: 1.4em;
     color: var(--color-text-secondary);
 }
 
@@ -185,6 +186,7 @@ section:first-of-type>article {
     grid-template-columns: auto 1fr;
     gap: 2rem;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 section:first-of-type>article>img {
@@ -217,7 +219,8 @@ section:first-of-type>article>h4 {
     margin-top: auto;
     font-size: 1.6rem;
     text-transform: uppercase;
-    text-indent: 2rem;         /* opgezocht op de website https://elementor.com/blog/nl/hoe-je-moet-inspringen-in-html/  */
+    text-indent: 2rem;
+    /* opgezocht op de website https://elementor.com/blog/nl/hoe-je-moet-inspringen-in-html/  */
 }
 
 section:first-of-type>article>p {
@@ -226,7 +229,7 @@ section:first-of-type>article>p {
 
 }
 
-section:first-of-type > article > a {
+section:first-of-type>article>a {
     grid-column: 1 / -1;
     background: rgba(255, 255, 255, 0.1);
     color: white;
@@ -234,11 +237,97 @@ section:first-of-type > article > a {
     text-decoration: none;
     border-radius: 0.3rem;
     display: flex;
-    justify-content: space-between; /* tekst en pijl uit elkaar */
     align-items: center;
-    max-width: 230px; /* pas aan naar gewenste breedte */
+    max-width: 13rem;
+    /*breedte balk */
     font-size: 0.875rem;
     letter-spacing: 0.1em;
-    font-weight: 500;
+}
+ 
+/* Section 2 css  */
+
+/* Dit is de title van de kaart */
+section:nth-of-type(2) > h2 {
+  margin: 5rem 1rem 2rem 1rem; /* Ruimte rondom de titel */
+  text-transform: uppercase;  
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-align: left;            
 }
 
+/*  De box waar alles in zit  */
+section:nth-of-type(2) > article {
+  display: flex;               /* Zet Flexbox aan */
+  flex-direction: column;      /* zorgt ervoor dat hij alles onder elkaar zet */
+  align-items: flex-start;     /* alles is links uitglijnt met deze opdr */
+  position: relative;          /* zorg dat de afbeelding blijft waar hij is */
+  
+  width: 20rem;
+  height: 20rem;               /* maakt het vierkant  */
+  margin: 0 1rem;              /* Ruimte aan de zijkanten */
+  padding: 1.5rem;             /*  tekst niet tegen rand plakt  */
+  border-radius: 0.75rem;      /* Afgeronde hoekjes */
+  overflow: hidden;            /* Zorgt dat de afbeelding niet buiten de bochten komt */
+  
+  background: #0b0b0b;         /* Donkere kleur (voor als de foto even niet laadt) */
+}
+
+/* De afbeelding zelf */
+section:nth-of-type(2) > article > img {
+  position: absolute;          /* Haalt foto uit de normale 'flow' */
+  top: 0;
+  left: 0;                     /* zet hem links boven */
+  z-index: 0;                  /* zet de afbeelding achter de tekst neer */
+  
+
+  width: 100%;
+  height: 100%;                /* Vult de hele kaart */
+  box-sizing: border-box;      /* Zorgt dat padding de foto niet groter maakt dan 100% */
+}
+
+/*Title links boven aan*/
+section:nth-of-type(2) > article > h3 {
+  position: relative;
+  z-index: 1;                /* index 1 legt hemm boven de afbeelding*/
+  
+}
+
+/* dit is de title van de prodcutnaam*/
+section:nth-of-type(2) > article > p {
+  position: relative;
+  z-index: 1;                
+  margin-top: auto;           /* Duwt de tekst naar beneden idk of dit mag of de juiste maniert is */
+  margin-bottom: 1rem;         /* legt hem ook boven de afbeelding*/
+  
+  text-align: left;         
+}
+
+section:nth-of-type(2) > article > a { /* De knop onderaan*/
+  position: relative;
+  z-index: 1;                 
+}
+
+
+/* Section 3 */
+
+section:nth-of-type(3) > h2 {
+    display: none;
+}
+/* Randen om en boven de section */
+section:nth-of-type(3) {
+  margin: 1rem 1rem;     
+}
+/* De Video zelf */
+section:nth-of-type(3) > video {
+  width: 100%;              
+  height: 30rem;             
+  display: block;            /*zorgt dat ie wordt begesneden  */
+  
+  object-fit: cover;         
+  
+}
+
+/* De titel verbergen (zoals eerder gevraagd) */
+section:nth-of-type(3) > h2 {
+  display: none;
+}
