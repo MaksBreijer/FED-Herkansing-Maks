@@ -1,0 +1,26 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+img, video {
+	  max-width:100%;
+}
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #7f8c8d;
+  --color-text-dark: #2c3e50;
+  --color-background: #000000;
+  --color-accent: #e74c3c;
+    
+  /* Spacing */
+}
