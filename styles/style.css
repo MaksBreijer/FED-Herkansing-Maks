@@ -15,11 +15,37 @@ img, video {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  /* Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #7f8c8d;
+  --color-text-dark: #2c3e50;
+  --color-background: #000000;
+  --color-accent: #e74c3c;
+  
+  /* Spacing */
+  --spacing-xs: 0.3rem;
+  --spacing-sm: 0.4rem;
+  --spacing-md: 0.6rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.2rem;
+  --spacing-2xl: 1.5rem;
+  --spacing-3xl: 2rem;
+  
+  /* Font sizes */
+  --font-xs: 0.7rem;
+  --font-sm: 0.75rem;
+  --font-md: 0.85rem;
+  --font-lg: 1rem;
+  --font-2xl: 2rem;
+  
+  /* Opacity */
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  --overlay-medium: rgba(255, 255, 255, 0.2);
+  --overlay-strong: rgba(255, 255, 255, 0.95);
+  
+  /* Transitions */
+  --transition-default: 0.3s;
 }
-
 
 
 
@@ -28,152 +54,149 @@ img, video {
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Alle algemene css */
 
 body {
-    background-color: #111;
+    background-color: var(--color-background);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
 }
 
 p {
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 400;
-font-style: normal;
-color: #7f8c8d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--color-text-secondary);
 }
 
 h1 {
-    position: absolute;
-    left: -9999px;
+  position: absolute;
+  left: -9999px;
 }
 
-h3, h2, button, a {
-  color: white;
+h2, h3, h4, button, a {
   font-family: "gotham", sans-serif;
 }
 
-/* Hier alleen de header code */
+/* Header */
 
 header {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 header video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
-/* Hier alleen de header navigatie code */
+
+/* Navigatie */
 
 header nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
 header nav img {
-    height: 35px;
+  height: 35px;
 }
 
 header nav a:last-child {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 0.6rem 1rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-decoration: none
+  background: var(--overlay-light);
+  border: 1px solid var(--overlay-medium);
+  color: var(--color-text-primary);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-sm);
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: background var(--transition-default);
 }
 
 header nav a:last-child:hover {
-    background: rgba(255, 255, 255, 0.2);
+  background: var(--overlay-medium);
 }
 
-/* Hier alleen de header article code */
+/* Header content */
 
 header article {
-    position: relative;
-    z-index: 10;
-    padding: 60vh 1.5rem 0;
+  position: relative;
+  z-index: 10;
+  padding: 60vh var(--spacing-2xl) 0;
 }
 
-header article > p:first-child {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 0.4rem 1rem;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
+header article > p:first-of-type {
+  display: inline-block;
+  background: var(--overlay-medium);
+  color: var(--color-text-primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-xs);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-2xl);
 }
 
 header article h2 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 2rem;
-    max-width: 100%;
+  color: var(--color-text-primary);
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-3xl);
 }
 
 header article > a {
-    display: inline-flex;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1rem 3rem 1rem 1.2rem;
-    width: 100%;
-    text-decoration: none;
-    position: relative;
-    transition: all 0.3s;
+  display: inline-flex;
+  flex-direction: column;
+  background: var(--overlay-strong);
+  padding: var(--spacing-lg) var(--spacing-3xl) var(--spacing-lg) var(--spacing-xl);
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  transition: all var(--transition-default);
 }
 
 header article > a::after {
-    content: '↗';
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1rem;
-    color: #e74c3c;
+  content: '↗';
+  position: absolute;
+  right: var(--spacing-lg);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-lg);
+  color: var(--color-accent);
 }
 
 header article > a:hover {
-    background: white;
-    transform: translateX(10px);
+  background: white;
+  transform: translateX(10px);
 }
 
 header article h3 {
-    color: #2c3e50;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
+  color: var(--color-text-dark);
+  font-size: var(--font-md);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
 }
 
 header article > a > p {
-    color: #7f8c8d;
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-size: var(--font-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* Hier alleen section 1 code code */
+/* section 1 css */
+
