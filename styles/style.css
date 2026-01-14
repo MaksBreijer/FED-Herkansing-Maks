@@ -556,6 +556,7 @@ section:nth-of-type(4) > ul > li > a {
 }
 
 /* Section 4 css */
+
 /* --- CONTAINER (Lijkt op je Header, maar nu met video) --- */
 section:nth-of-type(5) {
   position: relative;
@@ -596,7 +597,7 @@ section:nth-of-type(5) > p:first-of-type {
   font-size: 2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
 
 /* --- DE TITEL ("Your Step Into a New Era") --- */
@@ -607,46 +608,84 @@ section:nth-of-type(5) > p:nth-of-type(2) {
   
   color: #fff;
   font-size: 1rem;         /* Groot, net als een kop */        /* Dikgedrukt */
-  line-height: 1.1;
+  line-height: 0.5;
   text-transform: uppercase;
   margin-bottom: 2rem;
   margin-top: 0;
 }
 
-/* --- DE KNOP --- */
-/* Exacte kopie van je header button stijl */
+/* --- DE KNOP CONTAINER --- */
 section:nth-of-type(5) > a {
   position: relative;
-  z-index: 2;
-  
-  display: flex;           /* Zorgt dat de tekst onder elkaar kan */
-  flex-direction: column;
-  justify-content: center;
-  
-  background: #c8102e; /* Bijna wit vlak */
-  width: 100%;
-  padding: 1rem;
+  display: block;        /* Maakt er een blok van */
   box-sizing: border-box;
+  width: 100%;
   
-  text-decoration: none;
-  color: #ffffff;          /* Zwarte tekst */
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  background-color: #c4001a; 
+  border-radius: 4px;
+  text-decoration: none; /* Geen onderstreping */
   
-  /* Zorgt dat de 'enter' in je HTML code ook echt een nieuwe regel wordt */
-  white-space: pre-line;   
-  line-height: 1.4;
+  /* POSITIE: LINKSBOVEN */
+  /* Boven: 1rem | Rechts: 4.5rem (ruimte voor pijl) | Onder: 2.5rem | Links: 1.5rem */
+  padding: 0.50rem 4.5rem 2.5rem 0.80rem;
 }
 
-/* Het pijltje (↗) toevoegen */
+/* --- DE TITEL (H4) --- */
+section:nth-of-type(5) > a > h4 {
+  color: #ffffff;
+  font-size: 0.70rem;
+  font-weight: 700;      /* Dikgedrukt */
+  text-transform: uppercase;
+  
+  /* BELANGRIJK: Reset de standaard marges van de browser */
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* --- DE ONDERTITEL (P) --- */
+section:nth-of-type(5) > a > p {
+  color: rgba(255, 255, 255, 0.8); /* Iets transparant */
+  font-size: 0.65rem;
+  font-weight: 200;      /* Dunner */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+  /* Reset marges + klein beetje ruimte boven */
+  margin: 0;
+  margin-top: 0.3rem;    /* Afstand tot de H4 */
+}
+
+/* --- HET WITTE BLOKJE MET PIJL --- */
 section:nth-of-type(5) > a::after {
   content: '↗';
   position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ffffff;          /* Het rode accent */
-  font-size: 1.2rem;
+  
+  /* POSITIE: RECHTSBOVEN IN DE HOEK */
+  top: 0.50rem;
+  right: 0.50rem;
+  
+  /* FORMAAT */
+  width: 1rem;
+  height: 1rem;
+  
+  background-color: #ffffff;
+  color: #c4001a;
+  border-radius: 3px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 0.80rem;           
+  font-weight: 700;
 }
+
+
+/* Mobiele aanpassing voor Section 5 */
+@media (max-width: 600px) { /* Alles in een media query voor mobiel ./'*/
+    section:nth-of-type(5) {
+        height: 78vh; /* Korter maken = uitgezoomder beeld */
+    }
+}
+
+/* --- section 6 --- */
