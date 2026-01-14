@@ -246,81 +246,163 @@ section:first-of-type>article>a {
  
 /* Section 2 css  */
 
-/* Dit is de title van de kaart */
+/* ===== Product Highlight – MOBILE FIRST ===== */
+
+/* Sectie titel */
 section:nth-of-type(2) > h2 {
-  margin: 5rem 1rem 2rem 1rem; /* Ruimte rondom de titel */
-  text-transform: uppercase;  
-  font-size: 1.1rem;
+  margin: 3rem 1rem 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #ffffff;
-  text-align: left;            
 }
 
-/*  De box waar alles in zit  */
+/* Card */
+/* Card */
 section:nth-of-type(2) > article {
-  display: flex;               /* Zet Flexbox aan */
-  flex-direction: column;      /* zorgt ervoor dat hij alles onder elkaar zet */
-  align-items: flex-start;     /* alles is links uitglijnt met deze opdr */
-  position: relative;          /* zorg dat de afbeelding blijft waar hij is */
+  position: relative;
+  display: flex;
+  flex-direction: column;
   
-  width: 20rem;
-  height: 20rem;               /* maakt het vierkant  */
-  margin: 0 1rem;              /* Ruimte aan de zijkanten */
-  padding: 1.5rem;             /*  tekst niet tegen rand plakt  */
-  border-radius: 0.75rem;      /* Afgeronde hoekjes */
-  overflow: hidden;            /* Zorgt dat de afbeelding niet buiten de bochten komt */
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+  aspect-ratio: 3 / 4; /* Je mag hier ook 3 / 4.5 van maken voor nóg meer lengte */
   
-  background: #0b0b0b;         /* Donkere kleur (voor als de foto even niet laadt) */
+  /* AANGEPAST: Padding bovenkant kleiner gemaakt (0.75rem) */
+  /* Volgorde: Boven | Rechts | Onder | Links */
+  padding: 1.3rem 1.5rem 1.5rem 1.5rem;
+  
+  align-items: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #0b0b0b;
 }
-
-/* De afbeelding zelf */
+/* Achtergrondafbeelding */
+/* Achtergrondafbeelding */
 section:nth-of-type(2) > article > img {
-  position: absolute;          /* Haalt foto uit de normale 'flow' */
-  top: 0;
-  left: 0;                     /* zet hem links boven */
-  z-index: 0;                  /* zet de afbeelding achter de tekst neer */
+  position: absolute;
   
-
+  /* AANGEPAST: De afbeelding begint pas na 2.5rem vanaf de bovenkant */
+  inset: 0;       /* Reset */
+  top: 2.5rem;    /* Duw omlaag voor ruimte voor de tekst */
+  left: 0; 
   width: 100%;
-  height: 100%;                /* Vult de hele kaart */
-  box-sizing: border-box;      /* Zorgt dat padding de foto niet groter maakt dan 100% */
+  
+  /* Zorg dat de afbeelding de rest van de ruimte vult */
+  height: calc(100% - 2.5rem); 
+  
+  object-fit: cover;
+  object-position: top center;
+  z-index: 0;
+  transform: scale(1.0);
 }
 
-/*Title links boven aan*/
+/* Donkere gradient (boven + onder) --> AANGEPAST NAAR FADE-OUT */
+section:nth-of-type(2) > article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+  /* NIEUWE GRADIENT: Het 'verdwijn' effect */
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 11, 11, 0) 55%,   /* Bovenste 55% is transparant (ski's zichtbaar) */
+    rgba(40, 40, 40, 0.8) 85%, /* De overgangszone waar het donkerder wordt */
+    #0b0b0b 100%               /* Eindigt in volledig zwart aan de onderkant */
+  );
+  
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Tag linksboven */
 section:nth-of-type(2) > article > h3 {
   position: relative;
-  z-index: 1;                /* index 1 legt hemm boven de afbeelding*/
+  z-index: 3;
   
+  /* Zorgt dat hij linksboven blijft plakken en niet uitrekt */
+  align-self: flex-start; 
+  
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0.25rem;
+  margin: 0; /* Belangrijk: reset margin zodat hij strak bovenin staat */
+  color: #fff;
 }
 
-/* dit is de title van de prodcutnaam*/
+/* Productnaam onderin */
 section:nth-of-type(2) > article > p {
   position: relative;
-  z-index: 1;                
-  margin-top: auto;           /* Duwt de tekst naar beneden idk of dit mag of de juiste maniert is */
-  margin-bottom: 1rem;         /* legt hem ook boven de afbeelding*/
+  z-index: 3;
   
-  text-align: left;         
+  /* DE MAGISCHE REGEL: */
+  margin-top: auto; 
+  /* Dit zegt: "Neem alle ruimte boven mij in beslag". 
+     Hierdoor wordt de tekst strak naar de bodem geduwd. */
+     
+  margin-bottom: 0.75rem; /* Beetje ruimte tot de knop */
+  
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
 }
 
-section:nth-of-type(2) > article > a { /* De knop onderaan*/
+/* Knop */
+section:nth-of-type(2) > article > a {
   position: relative;
-  z-index: 1;                 
+  z-index: 3;
+
+  display: inline-block;
+  width: fit-content;
+
+  padding: 0.55rem 1.1rem;
+
+  background-color: #c4001a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  border-radius: 0.25rem;
+}
+
+section:nth-of-type(2) > article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 11, 11, 0) 50%, 
+    rgba(11, 11, 11, 0.8) 80%,
+    #0b0b0b 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 
 /* Section 3 */
 
 section:nth-of-type(3) > h2 {
-    display: none;
+    display: none; /*Moet een h1 element is maar heb hem ge hide*/
 }
 /* Randen om en boven de section */
 section:nth-of-type(3) {
   margin: 1rem 1rem;     
 }
+
 /* De Video zelf */
 section:nth-of-type(3) > video {
   width: 100%;              
-  height: 30rem;             
+  height: 28rem;             
   display: block;            /*zorgt dat ie wordt begesneden  */
   
   object-fit: cover;         
@@ -330,4 +412,241 @@ section:nth-of-type(3) > video {
 /* De titel verbergen (zoals eerder gevraagd) */
 section:nth-of-type(3) > h2 {
   display: none;
+}
+
+/* Slider ski's */
+
+ /* --- CONTAINER (De achtergrond) --- */
+section:nth-of-type(4) {
+  background-color: #000;  /* Zwarte achtergrond */
+  padding: 2rem 0;         /* Ruimte boven en onder */
+  overflow: hidden;        /* Voorkomt dat de pagina zelf horizontaal gaat scrollen */
+}
+
+section:nth-of-type(4) > h2 {
+  color: #fff;
+  margin: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2.8rem;
+  text-transform: uppercase;
+}
+
+/* --- DE SLIDER (De baan waarover je veegt) --- */
+section:nth-of-type(4) > ul {
+  display: flex;              /* Zet de kaarten naast elkaar (in plaats van onder elkaar) */
+  gap: 1rem;                  /* 16px ruimte tussen elke kaart */
+  overflow-x: auto;           /* Maakt horizontaal scrollen mogelijk */
+  padding: 0 1rem 2rem 1rem;  /* Ruimte rondom (zodat schaduwen niet afgekapt worden) */
+  
+  list-style: none;           /* Verwijdert de bolletjes van de lijst */
+  margin: 0;                  /* Reset standaard marges */
+  
+  scroll-snap-type: x mandatory; /* Zorgt dat de slider "vastklikt" op een kaart */
+  
+  /* Verberg de lelijke scrollbalk */
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE */
+}
+/* Verberg scrollbalk voor Chrome/Safari */
+section:nth-of-type(4) > ul::-webkit-scrollbar { display: none; }
+
+/* --- DE KAART (Het item) --- */
+section:nth-of-type(4) > ul > li {
+  position: relative;         /* Nodig om dingen erin te kunnen positioneren */
+  flex: 0 0 auto;             /* BELANGRIJK: Zorgt dat kaarten niet in elkaar krimpen */
+  width: 85vw;                /* De kaart is 85% van de breedte van je telefoon */
+  max-width: 350px;           /* Op grote schermen wordt hij niet breder dan 350px */
+  
+  scroll-snap-align: center;  /* Zorgt dat de kaart in het midden stopt na het vegen */
+  
+  display: flex;              /* Zorgt dat we dingen onder elkaar kunnen zetten */
+  flex-direction: column;
+}
+
+/* --- DE AFBEELDING --- */
+section:nth-of-type(4) > ul > li > img {
+  width: 100%;
+  aspect-ratio: 4 / 4.6;        /* Dwingt een staand formaat af (zoals in je screenshot) */
+  object-fit: cover;          /* Zorgt dat de foto niet uitrekt, maar netjes bijsnijdt */
+  border-radius: 4px;         /* Kleine afronding aan de hoeken */
+  
+  /* Maakt de onderkant van de foto donkerder zodat witte tekst leesbaar is */
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, rgba(0,0,0,0.6) 100%);
+}
+
+/* --- DE TITEL OP DE FOTO (De truc) --- */
+section:nth-of-type(4) > ul > li > h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  
+  /* HIER GEBEURT DE MAGIE: */
+  margin-top: -3rem;          /* Trekt de tekst 4rem OMHOOG, over de foto heen */
+  margin-bottom: 2rem;        /* Duwt de tekst eronder (Best for) weg */
+  padding-left: 1.1rem;       /* Beetje ruimte vanaf links */
+  
+  position: relative;         /* Nodig voor z-index */
+  z-index: 2;                 /* Zorgt dat tekst BOVENOP de foto ligt, niet erachter */
+}
+
+/* --- DE SPECIFICATIES (Labels & Waardes) --- */
+
+/* --- 1. De Grijze Labels (Best for, Conditions...) --- */
+section:nth-of-type(4) > ul > li > p:nth-of-type(odd) {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0; 
+  
+  /* KNOP 1: AFSTAND TUSSEN DE BLOKKEN */
+  /* Dit is de ruimte tussen de streep van de vorige en deze nieuwe tekst. */
+  /* Wil je de blokken verder uit elkaar? Maak dit hoger (bijv. 2rem). */
+  margin-top: 1.4rem; 
+}
+
+/* --- SPECIFIEK: De allereerste 'Best for' --- */
+section:nth-of-type(4) > ul > li > p:first-of-type {
+  /* KNOP 2: AFSTAND TOT DE FOTO */
+  /* Dit duwt het hele tekstblok naar beneden, weg van de titel/foto. */
+  margin-top: 2.1rem; 
+}
+
+/* --- 2. De Witte Waardes (All day skiing...) --- */
+section:nth-of-type(4) > ul > li > p:nth-of-type(even) {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  
+  /* KNOP 3: AFSTAND TUSSEN GRIJS EN WIT */
+  /* Hoe dicht staat de witte tekst op de grijze tekst? */
+  /* 0.2rem is heel dichtbij. 0.5rem is iets losser. */
+  margin-top: 0.2rem; 
+  
+  /* KNOP 4: AFSTAND TOT DE STREEP */
+  /* Hoeveel ruimte zit er onder de witte tekst tot aan het lijntje? */
+  padding-bottom: 1.5rem; 
+  
+  margin-bottom: 0; 
+  border-bottom: 1px solid #252525; /* Het lijntje */
+}
+
+/* --- DE KNOP (EXPLORE PRODUCT) --- */
+section:nth-of-type(4) > ul > li > a {
+  /* 1. POSITIE (Waar staat hij?) */
+  display: block;            /* Zorgt dat hij een eigen blok is (niet naast tekst) */
+  margin-top: 1.5rem;        /* Afstand tot de tekst erboven. Pas aan: 2rem = lager, 0.5rem = hoger */
+  margin-bottom: 0;          /* Afstand tot de onderkant van de kaart */
+  
+  /* 2. GROOTTE (Hoe groot is hij?) */
+  width: 60%;               /* Breedte. 100% = volle breedte. "fit-content" = zo breed als de tekst. */
+  padding: 0.5rem 0;           /* Dikte. 1rem = hoog/dik, 0.5rem = dunner. */
+  
+  /* 3. UITERLIJK (Kleur en tekst) */
+  background-color: #c4001a; /* De rode kleur */
+  color: white;              /* Witte tekst */
+  text-decoration: none;     /* Geen streep onder tekst */
+  text-align: center;        /* Tekst in het midden van de knop */
+  
+  /* 4. TEKST GROOTTE */
+  font-size: 0.8rem;         /* Grootte van de letters */
+  font-weight: 700;          /* Dikgedrukte letters */
+  text-transform: uppercase; /* Hoofdletters */
+  border-radius: 4px;        /* Afgeronde hoekjes */
+}
+
+/* Section 4 css */
+/* --- CONTAINER (Lijkt op je Header, maar nu met video) --- */
+section:nth-of-type(5) {
+  position: relative;
+  height: 85vh;            /* Zelfde hoogte-gevoel als een header */
+  width: 100%;
+  overflow: hidden;
+  
+  /* Flexbox om alles netjes onderin te zetten, net als bij de header */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alles naar beneden */
+  align-items: flex-start;   /* Alles links */
+  
+  padding: 0 1.5rem 3rem 1.5rem; 
+  box-sizing: border-box;
+}
+
+/* --- VIDEO ACHTERGROND --- */
+section:nth-of-type(5) > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Zorgt dat video het hele vlak vult */
+  z-index: 0;
+}
+
+
+/* --- DE TAG ("Pro Boot") --- */
+/* Dit is exact dezelfde stijl als je header tag */
+section:nth-of-type(5) > p:first-of-type {
+  position: relative;
+  z-index: 2;
+  
+  display: inline-block;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* --- DE TITEL ("Your Step Into a New Era") --- */
+/* Je gebruikt hier een <p>, maar we stylen hem als een <h2> uit de header */
+section:nth-of-type(5) > p:nth-of-type(2) {
+  position: relative;
+  z-index: 2;
+  
+  color: #fff;
+  font-size: 1rem;         /* Groot, net als een kop */        /* Dikgedrukt */
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+/* --- DE KNOP --- */
+/* Exacte kopie van je header button stijl */
+section:nth-of-type(5) > a {
+  position: relative;
+  z-index: 2;
+  
+  display: flex;           /* Zorgt dat de tekst onder elkaar kan */
+  flex-direction: column;
+  justify-content: center;
+  
+  background: #c8102e; /* Bijna wit vlak */
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  
+  text-decoration: none;
+  color: #ffffff;          /* Zwarte tekst */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  
+  /* Zorgt dat de 'enter' in je HTML code ook echt een nieuwe regel wordt */
+  white-space: pre-line;   
+  line-height: 1.4;
+}
+
+/* Het pijltje (↗) toevoegen */
+section:nth-of-type(5) > a::after {
+  content: '↗';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;          /* Het rode accent */
+  font-size: 1.2rem;
 }
