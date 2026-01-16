@@ -24,3 +24,52 @@ img, video {
     
   /* Spacing */
 }
+
+footer {
+    background-color: black;
+    padding: 3rem 2rem; /* Ruimte om de inhoud heen */
+    font-family: sans-serif;
+}
+
+/* Elk blokje (Support, Stores, Discover) */
+footer nav {
+    margin-bottom: 3rem; /* Ruimte tussen de groepen onder elkaar */
+}
+
+/* De titels (zoals SUPPORT, STORES) */
+footer h4 {
+    color: var(--grijs); /* Grijs, zoals op de foto */
+    font-size: 0.9rem;
+    font-weight: 400; /* Normale dikte */
+    letter-spacing: 0.15rem; /* Letters ver uit elkaar */
+    text-transform: uppercase;
+    margin: 0 0 1.2rem 0; /* Alleen ruimte aan de onderkant */
+}
+
+/* De lijst met links resetten */
+footer ul {
+    list-style: none; /* Geen puntjes voor de lijst */
+    padding: 0;
+    margin: 0;
+}
+
+/* De items in de lijst */
+footer li {
+    margin-bottom: 0.8rem; /* Ruimte tussen de regels */
+}
+
+/* De links zelf (CONTACT, FLAGSHIP STORE etc.) */
+footer a {
+    color: var(--wit);
+    text-decoration: none; /* Geen streep eronder */
+    text-transform: uppercase; /* Hoofdletters */
+    font-weight: 700; /* Dikgedrukt */
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    display: inline-block; /* Zorgt dat transformaties goed werken */
+}
+
+/* Optioneel: kleurverandering bij eroverheen gaan met muis */
+footer a:hover {
+    color: #ccc;
+}
