@@ -15,8 +15,9 @@ video {
     max-width: 100%;
 }
 
+/* De customproperties */
 :root {
-    /* Kleuren custom*/
+    /* Kleuren */
     --rood: #c4001a;
 
     --zwart: #000000;
