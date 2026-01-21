@@ -2,7 +2,7 @@
 /*REMEDY*/
 
 /* Zorgt dat padding en randen niet de breedte verpesten */
-/* BRON: https://www.w3schools.com/css/css3_box-sizing.asp */
+/* bron: https://www.w3schools.com/css/css3_box-sizing.asp */
 *,
 *::after,
 *::before {
@@ -267,7 +267,7 @@ section:nth-of-type(2)>article {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: calc(100% - 2rem);   /*born ai voor calc wellicht kijken of ik hier nog iets anders voor kan doen */
+    width: calc(100% - 2rem);   /*bron ai voor calc wellicht kijken of ik hier nog iets anders voor kan doen */
     margin: 0 auto;
     aspect-ratio: 3 / 4;
     padding: 1.3rem 1.5rem 1.5rem 1.5rem;
@@ -690,7 +690,7 @@ section:nth-of-type(7) h2 {
     max-width: 600px;
 }
 
-/* De Broodtekst */
+/* De  p ekst */
 section:nth-of-type(7) p {
     position: relative;
     z-index: 2;
@@ -723,7 +723,7 @@ section:nth-of-type(7) form {
     
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;                             /*bron chatgpt.com ik kwam er echt niet uit qua positionering*/
+    gap: 1rem;                            /* Layout structuur gegenereerd met hulp van AI chatgpt.com om een responsive grid voor het formulier te maken, daarna zelf aangepast voor de styling. */
 }
 
 /* Alle input velden */
@@ -797,7 +797,7 @@ section:nth-of-type(8) ul {
     padding: 0 1.5rem 2rem 2.5rem;
     list-style: none;
     margin: 0;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;    /* Slider functionaliteit gebaseerd op CSS Scroll Snap: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type ai geholpen zelf aanpast*/
     scrollbar-width: none;
 }
 
