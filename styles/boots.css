@@ -58,7 +58,7 @@ h1 {
     left: -9999px;
 }
 
-/* --- HEADER --- */
+/* HEADER  */
 header nav {
     position: absolute;
     top: 0;
@@ -183,7 +183,7 @@ header article a::after {
     font-size: 1rem;
 }
 
-/* --- SECTIE 1 (Intro) --- */
+/* section 1 het eerste met knop */
 section:first-of-type {
     margin-left: 1rem;
         margin-right: 1rem;
@@ -231,7 +231,7 @@ section:first-of-type button::after {
     display: flex;
 }
 
-/* --- SECTIE 2 (Colors) --- */
+/* section 2 kleuren */
 section:nth-of-type(2) {
     display: flex;
     margin-top: 3rem;
@@ -264,7 +264,7 @@ section:nth-of-type(2) p {
     margin: 0;
 }
 
-/* --- SECTIE 3 (Tech Specs) --- */
+/* scetion 4 techs specs  */
 section:nth-of-type(3) {
     display: flex;
     flex-direction: column;
@@ -320,7 +320,7 @@ section:nth-of-type(3) figcaption p {
     margin: 0;
 }
 
-/* --- SECTIE 4 (De Schoenen) --- */
+/* section 4 de schoenen*/
 section:nth-of-type(4) {
     color: white;            
     padding: 3rem 1rem;      
@@ -365,7 +365,7 @@ section:nth-of-type(4) img:hover {
     filter: brightness(1.2);  
 }
 
-/* --- SECTIE 5 (Foto/Video) --- */
+/* section 5 foto video */
 section:nth-of-type(5) {
     display: flex;
     flex-direction: column;
@@ -395,7 +395,7 @@ section:nth-of-type(5) h5 {
     display: none;
 }
 
-/* --- SECTIE 6 (Slider) --- */
+/* section 6 slider */
 section:nth-of-type(6) {
     background-color: black;
     color: white;
@@ -471,7 +471,7 @@ section:nth-of-type(6) article img {
     z-index: 0;
 }
 
-/* Gradiënt */
+/* overlaay*/
 section:nth-of-type(6) article::after {
     content: "";
     position: absolute;
@@ -484,33 +484,33 @@ section:nth-of-type(6) article::after {
     pointer-events: none;
 }
 
-/* AANGEPAST: Tekst stijl zoals op voorbeeld */
+/*  Tekst stijl  */
 section:nth-of-type(6) article h3 {
     position: relative;
     z-index: 2;
     color: white;
-    font-size: 1.4rem; /* Groter */
-    font-weight: 800;  /* Dikgedrukt */
+    font-size: 1.4rem; /
+    font-weight: 800;  
     text-transform: uppercase;
-    line-height: 1.1;  /* Strakke regels */
+    line-height: 1.1; 
     margin: 0 0 0.5rem 0;
     padding: 0 1.5rem;
-    text-align: left; /* Links uitlijnen */
+    text-align: left;
 }
 
 section:nth-of-type(6) article p {
     position: relative;
     z-index: 2;
-    color: #e0e0e0; /* Iets lichter voor leesbaarheid */
+    color: #e0e0e0; 
     font-size: 0.95rem;
     line-height: 1.4;
     margin: 0 0 2rem 0;
     padding: 0 1.5rem;
-    text-align: left; /* Links uitlijnen */
+    text-align: left; 
 }
 
 
-/* --- SECTIE 7: THE ART OF BUILDING OUR PRO BOOT --- */
+/* section 7 at pro boot --- */
 section:nth-of-type(7) {
     color: white;
     padding: 0 1.25rem 3rem 1.25rem;
@@ -556,7 +556,7 @@ section:nth-of-type(7) p {
     text-align: left;
 }
 
-/* --- SECTIE 8: FULL SPECS & SIZECHART --- */
+/* full specs section 8 */
 section:nth-of-type(8) {
     background-color: black;
     color: white;
@@ -566,7 +566,7 @@ section:nth-of-type(8) {
     margin-top: 2rem;
 }
 
-/* --- ALGEMENE OPMAAK ITEMS (ZONDER LIJNEN) --- */
+/* algemene opmaak  */
 section:nth-of-type(8) > section,
 section:nth-of-type(8) details {
     padding: 1rem 0;          
@@ -574,7 +574,7 @@ section:nth-of-type(8) details {
     width: 100%;
 }
 
-/* --- TITELS (FULL SPECS / SIZECHART) --- */
+/* tiel full specs */
 section:nth-of-type(8) h2 {
     font-size: 0.9rem;     
     font-weight: 700;       
@@ -586,7 +586,7 @@ section:nth-of-type(8) h2 {
     text-align: left; /* De titels blijven wel links staan */
 }
 
-/* --- UITKLAP HEADER (SUMMARY) --- */
+/* -de uitklap summeray */
 section:nth-of-type(8) summary {                /*https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details*/
     list-style: none;                           /* Ik heb opgezocht hoe ik elementent kan in en uit klikken met alleen css en dan kom je op de summary tag */
     display: flex;                              /* Ik heb chapgpt.com gevraag hoe je dit zou kunnen toepassen*/
@@ -595,11 +595,11 @@ section:nth-of-type(8) summary {                /*https://developer.mozilla.org/
     cursor: pointer;
     width: 100%;
     outline: none;
-    padding-bottom: 1.5rem; /* Ruimte tussen titel en tabel */
+    padding-bottom: 1.5rem; 
 }
 section:nth-of-type(8) summary::-webkit-details-marker { display: none; }
 
-/* --- PLUSJE (+) --- */
+/* plusje */
 section:nth-of-type(8) summary::after {
     content: "+";       
     font-size: 1.5rem;
@@ -608,12 +608,12 @@ section:nth-of-type(8) summary::after {
     transition: transform 0.3s ease;
 }
 
-/* --- MINNETJE (-) --- */
+/*  min streepje */
 section:nth-of-type(8) details[open] summary::after {
     content: "-";
 }
 
-/* --- DE TABEL (CLEAN LOOK, GEEN LIJNEN) --- */
+/* de tabel */
 section:nth-of-type(8) table {
     width: 100%;
     margin-top: 0;
@@ -628,19 +628,19 @@ section:nth-of-type(8) table {
 
 /* --- TABEL KOPJES (WIT & DIK) --- */
 section:nth-of-type(8) thead th {
-    border: none; /* Geen lijnen */
+    border: none; 
     padding: 0.5rem 0;
     text-transform: uppercase;
     font-size: 0.8rem;
-    font-weight: 700; /* Dikgedrukt */
-    color: white;     /* Wit */
+    font-weight: 700; 
+    color: white;     
 }
 
 /* --- TABEL DATA (GRIJS) --- */
 section:nth-of-type(8) tbody td {
-    border: none; /* Geen lijnen */
-    padding: 0.3rem 0; /* Iets minder ruimte tussen de regels */
-    color: #999;  /* Grijs */
+    border: none; 
+    padding: 0.3rem 0; /
+    color: #999;  
     font-weight: 400;
 }
 
@@ -730,57 +730,49 @@ section:nth-of-type(9) > ul > li p {
 }
 
 
-/*section 10 is ook copy paste pagina 1 */
 /* 10 Section 9 laatste nieuws */
-/* --- De Hoofdcontainer (de hele sectie) --- */
 section:nth-of-type(10) {
-    /* 1.25rem boven/onder, 1.5rem (ong. 24px) links/rechts voor de witruimte aan de zijkanten */
     padding: 1.25rem 1rem; 
     font-family: sans-serif;
-    
-    /* Zorgt ervoor dat de padding de breedte van de site niet opblaast (voorkomt horizontale scrollbalk) */
     box-sizing: border-box; 
 }
 
-/* --- De Titel (Where to find us) --- */
+/*  De Titel Where to find us  */       /*zet bronnen nog neer!*/
 section:nth-of-type(10) > h3 {
-    color: var(--wit);      /* De kleur van de tekst */
-    margin: 0 0 2.8rem 0;   /* Alleen marge aan de onderkant voor afstand tot de foto's */
+    color: var(--wit);      
+    margin: 0 0 2.8rem 0;   
     font-size: 1rem;        
-    letter-spacing: 0.1em;  /* Ruimte tussen de letters */
-    text-transform: uppercase; /* Alles in hoofdletters */
+    letter-spacing: 0.1em;  
+    text-transform: uppercase; 
 }
 
 /* --- De Kaart (Het blokje per foto) --- */
 section:nth-of-type(10) article {
-    position: relative;     /* Belangrijk! Zorgt dat de absolute foto hierbinnen blijft */
-    height: 15rem;       /* Vaste hoogte van het blok */
-    margin-bottom: 1.1rem;  /* Ruimte tussen de blokken onderling */
-    
-    /* Flexbox instellingen om de tekst onderin te krijgen */
+    position: relative;     
+    height: 15rem;      
+    margin-bottom: 1.1rem;  
     display: flex;
     align-items: flex-end;  
-    
-    padding: 1rem;      /* Ruimte tussen de rand van de foto en de tekst */
+    padding: 1rem;     
     box-sizing: border-box; 
-    overflow: hidden;       /* Zorgt dat de foto niet buiten de lijntjes kleurt bij zoomen */
+    overflow: hidden;       
 }
 
 /* --- De Afbeelding --- */
 section:nth-of-type(10) article img {
-    position: absolute;     /* Haalt foto uit de normale tekststroom -> tekst kan er nu overheen */
+    position: absolute;    
     top: 0;
     left: 0;
-    width: 100%;            /* Vult de hele breedte van de kaart */
-    height: 100%;           /* Vult de hele hoogte van de kaart */
-    object-fit: cover;      /* Snijdt de foto bij zodat hij niet uitrekt of vervormt */
-    z-index: 1;             /* Laag 1: helemaal onderop */
+    width: 100%;            
+    height: 100%;         
+    object-fit: cover;      
+    z-index: 1;             
 }
 
 /* --- De Donkere Overlay (Schaduw) --- */
 section:nth-of-type(10) article::after {
-    content: '';            /* Leeg element aanmaken */
-    position: absolute;     /* Ook over de foto heen leggen */
+    content: '';            
+    position: absolute;     
     top: 0;
     left: 0;
     width: 100%;
@@ -789,16 +781,16 @@ section:nth-of-type(10) article::after {
     /* Het verloopje van zwart (onder) naar doorzichtig (midden) zodat tekst leesbaar is */
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 50%);
     
-    z-index: 2;             /* Laag 2: Bovenop de foto, maar onder de tekst */
+    z-index: 2;             
 }
 
-/* --- De Link Tekst (FIND A RETAILER) --- */
+/* De Link Tekst find retailer */
 section:nth-of-type(10) article a {
-    position: relative;     /* Nodig om z-index te laten werken */
-    z-index: 3;             /* Laag 3: Helemaal bovenop, zodat hij klikbaar en zichtbaar is */
+    position: relative;     
+    z-index: 3;           
 
     color: var(--wit);
-    text-decoration: none;  /* Geen onderstreping */
+    text-decoration: none;  
     text-transform: uppercase;
     font-weight: 400;
     font-size: 1rem;
@@ -887,3 +879,404 @@ footer p {
     color: #666;
     font-size: 0.8rem;
     margin-top: 2rem;}
+
+
+    /*responsive voor pc*/
+
+@media (min-width: 900px) {
+    header article {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* De article beslaat nu de hele video-hoogte */
+        max-width: none;
+        left: 0;
+        margin: 0;
+        padding: 0 5.5rem;
+    }
+
+    /* plaatste de tekst links hoger --- */
+    header article > p:first-of-type,
+    header article h2 {
+        position: absolute;
+        left: 5.5rem;
+    }
+
+    /* De grijze balk (Kort) */
+    header article > p:first-of-type {
+        top: 30vh; 
+        width: fit-content;
+        background-color: #333;
+        padding: 0.2rem 0.6rem;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        border-radius: 2px;
+    }
+
+    /* De titel PRO BOOT */
+    header article h2 {
+        top: calc(35vh + 1.5rem); 
+        font-size: 2.8rem;
+        margin: 0;
+        line-height: 0.9;
+    }
+
+    /* find the store rechts wordt uitgelijn --- */
+    header article a {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem; 
+        
+        width: 12rem;
+        padding: 0.8rem 1rem;
+        background: transparent;
+        border: 1px solid #333;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        text-decoration: none;
+    }
+
+
+  /*  DE SCHOENEN */
+    section:nth-of-type(4) {
+        float: left;
+        width: 45%;
+        margin-left: 5.5rem;
+        position: relative;
+        margin-top: -55rem; 
+        padding: 0;
+    }
+
+    section:nth-of-type(4) ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    /*  duwt alle tekst-secties naar rechterkant */
+    section:nth-of-type(1),
+    section:nth-of-type(2),
+    section:nth-of-type(3) {
+        margin-left: 55%; 
+        width: 35%;
+        padding-right: 5.5rem;
+        clear: none; 
+    }
+
+    /*  Specs layout in Sectie 3 --- */
+    section:nth-of-type(3) {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    /* De lijin over de volle breedte van de rechterkolom */
+    section:nth-of-type(3) figure {
+        grid-column: span 2;
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    section:nth-of-type(3) figcaption {
+        display: flex;
+        justify-content: space-between;
+        color: #888;
+        font-size: 0.8rem;
+    }
+
+    /* flex onderaan voor breedte */
+    section:nth-of-type(3) h2:last-of-type,
+    section:nth-of-type(3) h2:last-of-type + p {
+        grid-column: span 2;
+        margin-top: 1rem;
+    }
+
+    /* titel setion 1*/ /*kan naar boven */
+    section:nth-of-type(1) h2 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+    }   
+
+/* ---section 5 video langer maken en img kleiner en naast elkaae met  --- */
+section:nth-of-type(5) {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: flex-start; 
+    width: 100%;
+    padding: 0 5.5rem;
+    margin: 4rem 0;
+    gap: 2rem; 
+    overflow: hidden;
+}
+
+section:nth-of-type(5) img {
+    width: 40%; 
+    height: auto; 
+    object-fit: cover;
+}
+
+section:nth-of-type(5) video {
+    width: 60%; 
+    height: 45rem;  
+    display: block;
+    object-fit: cover; 
+}
+
+section:nth-of-type(5) h5 {
+    display: none;
+}
+
+/*sliderer groter*/
+
+section:nth-of-type(6) > h3 {
+        margin-left: 5.5rem; 
+        text-align: left;
+    }
+
+    section:nth-of-type(6) > h2{
+            margin-left: 36%; 
+    }
+
+    section:nth-of-type(6) > p {
+        margin-left: 40%;    
+        max-width: 50rem;
+        color: var(--grijs);
+    }
+
+   /* 1. dat er niks gebeurdt met de container */
+    section:nth-of-type(6) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* 2. De Slider  over de hele breedte */
+    section:nth-of-type(6) ul {
+        padding-left: 5.5rem;  
+        padding-right: 5.5rem; 
+        gap: 40px;             
+        width: 100%;
+    }
+
+    /* 3. de afbeeldingen in d (Article) veel breder maken */
+    section:nth-of-type(6) article {
+        width: 70em;         
+        height: 50rem;       
+        max-width: 100vw;       
+    }
+
+    /* 4. Tekst in de kaarten aanpassen aan de breedte */
+    section:nth-of-type(6) article h3 {
+        font-size: 2.5rem;     
+        max-width: 80%;    }    
+
+section:nth-of-type(7) {
+        display: grid;
+        grid-template-columns: 35rem 1fr;
+        grid-template-rows: 1fr auto auto auto; 
+        
+        padding: 5rem 5.5rem;
+        column-gap: 5rem;
+        background-color: black;
+        align-items: end; 
+    }
+
+    /* 1. DE AFBEELDING (Rechts) */
+    section:nth-of-type(7) img {
+        grid-column: 2;
+        grid-row: 1 / span 4; /* Loopt over de hele hoogte */
+        width: 80%;
+        margin-left: 10rem;
+        height: auto;
+    }
+
+    /* Dde tekst */
+    section:nth-of-type(7) h3,
+    section:nth-of-type(7) h2,
+    section:nth-of-type(7) p {
+        grid-column: 1;
+        margin: 0;
+        margin-bottom: 10rem;
+        padding: 0;
+    }
+
+    section:nth-of-type(7) h3 {                             
+        margin-top: auto;             /* Dit zet alles beneden naast de skischoen */
+        margin-bottom: 0.5rem;
+        background-color: #333;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        width: fit-content;
+        font-size: 0.7rem;
+    }
+
+    section:nth-of-type(7) h2 {
+        font-size: 3.2rem;
+        line-height: 0.95;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;        
+    }
+
+    section:nth-of-type(7) p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #b8b8b8;
+        max-width: 30rem;
+
+
+    /*fullspecs 8*/
+section:nth-of-type(8) > h2 {
+        margin: 0;
+        padding-left: 5rem;        
+        margin-bottom: 3rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: var(--wit);
+    }
+
+    /* De h2 zelf */
+    section:nth-of-type(8) details summary h2 {
+        display: inline-block;           /* Zorgt dat hij zich als een blokje in het midden*/
+        margin: 0;
+        margin-left: 60rem;
+        padding: 2rem 0;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    section:nth-of-type(9) > h2 {
+        margin-left: 4rem;
+    }
+
+    section:nth-of-type(9) > ul > li {
+        flex: 0 0 35vw;
+        flex-direction: column;
+        height: 40vh;
+        left: 4em;
+    }
+    
+    section:nth-of-type(9) > ul > li p {
+        font-size: 1.8rem;
+        left: 2rem;
+    }
+
+    
+     /* 1. De laatste 3 afbeelding copy paste pagina 1) */
+    section:nth-of-type(10) {
+        padding: 4rem 5.5rem; 
+        display: grid;
+        grid-template-columns: 1.2fr 1.2fr; 
+        gap: 1rem; 
+        align-items: stretch;
+        box-sizing: border-box;
+    }
+
+    /* 2. De Titel (H3) */
+    section:nth-of-type(10) > h3 {
+        grid-column: 1 / -1;  /* Neemt de volledige breedte in boven de twee kolommen */
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--wit);
+    }
+
+    /* 3. de 3 afbeelding in de article */
+    section:nth-of-type(10) article {
+        height: auto; 
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    /* de foto links */
+    section:nth-of-type(10) article:first-of-type {
+        grid-column: 1;
+        grid-row: 2 / 4; 
+        aspect-ratio: 1 / 1; /*voor vierkante vorm*/
+    }
+
+    /* de 2 afbeeldingen rechts */
+    section:nth-of-type(10) article:nth-of-type(2),
+    section:nth-of-type(10) article:nth-of-type(3) {
+        grid-column: 2;
+        aspect-ratio: 2 / 0.97; 
+    }
+
+    /* 4. De Tekst in de foto's */
+    section:nth-of-type(10) article a {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+
+    footer {
+        padding: 5rem 5.5rem 3rem 5.5rem; /* Ruimte aan de zijkanten */
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;    /* verdeling van de tekst */
+        gap: 2rem;
+    }
+
+    /* De social icons  */
+    footer nav:nth-of-type(4) {
+        grid-column: 1 / -1;         /* Over de hele breedte van de grid */
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between; /* Drukt icons links en select rechts */
+        align-items: center;            
+    }
+
+    /* De lijst met icoontjes */
+    footer nav:nth-of-type(4) ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /* De engelse knop */
+    footer nav:nth-of-type(4) select {
+        width: 240px;                   /* Breedte zoals op de afbeelding */
+        padding: 0.7rem 1rem;
+        background-color: transparent;
+        color: var(--wit);
+        border: 1px solid #444;        /* Het grijze randje van de afbeelding */
+        font-family: var(--font-tekst);
+        font-size: 0.85rem;
+        cursor: pointer;
+        margin-left: auto; 
+    }
+
+    /*  De footer en dan met name de onderste balk */
+    footer nav:nth-of-type(5) {
+        grid-column: 1 / -1;
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px solid #222;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    footer nav:nth-of-type(5) ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    footer p {
+        margin: 0;
+        color: #666;
+        font-size: 0.8rem;
+        text-align: right;
+    }
+}
+}

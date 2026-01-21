@@ -19,25 +19,13 @@ video {
 :root {
     /* Kleuren */
     --rood: #c4001a;
-
     --zwart: #000000;
-    /* Achtergrond site */
     --zwart-kaart: #0b0b0b;
-    /* Achtergrond van de kaarten */
     --zwart-licht: #1a1a1a;
-    /* Lege vlakken */
-
     --wit: #ffffff;
-    /* Hoofdtekst en titels */
     --grijs: #a5a5a5;
-    /* Bijtekst */
     --donker-blauw: #2c3e50;
-    /* Donkere tekst (voor op witte knoppen) */
-
     --lijntje: rgba(255, 255, 255, 0.2);
-    /* Dunne randjes */
-
-    /* Lettertypes */
     --font-titel: "gotham", sans-serif;
     --font-tekst: Arial, Helvetica, sans-serif;
 }
@@ -78,7 +66,6 @@ h1 {
 
 /* 2. Header (video + navigatie) */
 
-
 header {
     position: relative;
     min-height: 100vh;
@@ -86,7 +73,7 @@ header {
 }
 
 /* De video op de achtergrond */
-/* BRON voor absolute positionering: https://www.w3schools.com/css/css_positioning.asp */
+/* bron voor absolute positionering: https://www.w3schools.com/css/css_positioning.asp */
 header video {
     position: absolute;
     inset: 0;
@@ -97,7 +84,7 @@ header video {
 }
 
 /* navgatie balk */
-/* BRON voor flexbox: https://www.w3schools.com/css/css3_flexbox.asp */
+/* bron voor flexbox: https://www.w3schools.com/css/css3_flexbox.asp */
 header nav {
     position: absolute;
     top: 0;
@@ -200,7 +187,7 @@ header article>a>p {
 }
 
 
-/* 3. SECTION 1: (Plaatje links, tekst rechts) */
+/* section 1 */
 
 
 section:first-of-type>article {
@@ -364,7 +351,7 @@ section:nth-of-type(2)>article>a {
 }
 
 
-/* 5. SECTION 3: VIDEO  (Hier moet alleen nog een pauze knop komen.)         */
+/*  section 3 VIDEO  (Hier moet alleen nog een pauze knop komen.)         */
 
 section:nth-of-type(3) {
     margin: 1rem 1rem;
@@ -381,7 +368,7 @@ section:nth-of-type(3)>video {
 }
 
 
-/* 6. SECTION 4:  slider (Verticaal, verschillende Ski's)        */
+/* section 4  slider        */
 
 section:nth-of-type(4) {
     background-color: var(--zwart);
@@ -402,11 +389,11 @@ section:nth-of-type(4)>h2 {
 section:nth-of-type(4)>ul {
     display: flex;
     gap: 1rem;
-    overflow-x: auto;   /* BRON voor side scrollen: https://www.w3schools.com/css/css_overflow.asp */ 
+    overflow-x: auto;   /* bron voor side scrollen: https://www.w3schools.com/css/css_overflow.asp */ 
     padding: 0 1rem 2rem 1rem;
     list-style: none;
     margin: 0;
-    scroll-snap-type: x mandatory;     /* BRON voor scroll snap: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type (geen goede w3schools hiervoor) */
+    scroll-snap-type: x mandatory;     /* bron voor scroll snap: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type (geen goede w3schools hiervoor) */
     scrollbar-width: none;
 }
 
@@ -487,7 +474,7 @@ section:nth-of-type(4)>ul>li>a {
 
 
 
-/* 7. SECTION 5: VIDEO + RODE KNOP         */
+/* SECTION 5: vieo en rode knop        */
 
 section:nth-of-type(5) {
     position: relative;
@@ -595,7 +582,7 @@ section:nth-of-type(5)>a::after {
 }
 
 
-/* 8. SECTION 6: WIDE SWIPER (Liggend)            */
+/* SECTION 6 swiper           */
 
 
 section:nth-of-type(6) {
@@ -658,7 +645,7 @@ section:nth-of-type(6)>ul>li p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* --- SECTIE 7: NIEUWSBRIEF --- */
+/* forms */                      /*voeg bron toe*/
 section:nth-of-type(7) {
     position: relative;
     width: 100%;
@@ -844,7 +831,7 @@ section:nth-of-type(8) ul li > img:first-child {
     display: block;
 }
 
-/* Eerste badge (SKITEST of WORLD CUP) */
+/* ul li firt of type worldcup */
 section:nth-of-type(8) ul li p:first-of-type {
     display: inline-block;
     background-color: var(--lichtgrijs);
@@ -857,7 +844,7 @@ section:nth-of-type(8) ul li p:first-of-type {
     width: fit-content;
 }
 
-/* Tweede badge (DOWNHILL) */
+/* Downhills */
 section:nth-of-type(8) ul li p:nth-of-type(2) {
     display: inline-block;
     background-color: var(--lichtgrijs);
@@ -870,7 +857,7 @@ section:nth-of-type(8) ul li p:nth-of-type(2) {
     width: fit-content;
 }
 
-/* Titel/heading (bijv. "AUDI FIS SKI WORLD CUP...") */
+/* Titel heading */
 section:nth-of-type(8) ul li h2 {
     font-size: 1rem;
     font-weight: 800;
@@ -902,18 +889,14 @@ section:nth-of-type(8) ul li p:last-of-type {
     color: var(--zwart);
     margin: 0.2rem 1rem 1rem 1rem;
 }
-/* 10 Section 9 laatste nieuws */
-/* --- De Hoofdcontainer (de hele sectie) --- */
+/* Section 9 laatste nieuws */
 section:nth-of-type(9) {
-    /* 1.25rem boven/onder, 1.5rem (ong. 24px) links/rechts voor de witruimte aan de zijkanten */
     padding: 1.25rem 1rem;
     font-family: sans-serif;
-
-    /* Zorgt ervoor dat de padding de breedte van de site niet opblaast (voorkomt horizontale scrollbalk) */
     box-sizing: border-box;
 }
 
-/* --- De Titel (Where to find us) --- */
+/* where to find us*/
 section:nth-of-type(9)>h3 {
     color: var(--wit);
     margin: 0 0 2.8rem 0;
@@ -922,7 +905,7 @@ section:nth-of-type(9)>h3 {
     text-transform: uppercase;
 }
 
-/* --- De Kaart (Het blokje per foto) --- */
+/*  article*/
 section:nth-of-type(9) article {
     position: relative;
     height: 15rem;
@@ -934,7 +917,7 @@ section:nth-of-type(9) article {
     overflow: hidden;
 }
 
-/* --- De Afbeelding --- */
+/*  De Afbeelding  */
 section:nth-of-type(9) article img {
     position: absolute;
     top: 0;
@@ -945,10 +928,9 @@ section:nth-of-type(9) article img {
     z-index: 1;
 }
 
-/* --- De Donkere Overlay (Schaduw) --- */
+/* De Donkere (Schaduw) */
 section:nth-of-type(9) article::after {
     position: absolute;
-    /* Ook over de foto heen leggen */
     top: 0;
     left: 0;
     width: 100%;
@@ -956,16 +938,13 @@ section:nth-of-type(9) article::after {
     z-index: 2;
 }
 
-/* --- De Link Tekst (FIND A RETAILER) --- */
+/*  De Link Tekst */
 section:nth-of-type(9) article a {
     position: relative;
-    /* Nodig om z-index te laten werken */
     z-index: 3;
-    /* Laag 3: Helemaal bovenop, zodat hij klikbaar en zichtbaar is */
 
     color: var(--wit);
     text-decoration: none;
-    /* Geen onderstreping */
     text-transform: uppercase;
     font-weight: 400;
     font-size: 1rem;
@@ -982,7 +961,7 @@ footer {
     font-family: var(--font-tekst);
 }
 
-/* --- KOPJES (Support, Stores, etc) --- */
+/* Support, Stores, etc  */
 footer h4 {
     color: #888;
     font-size: 0.8rem;
@@ -1070,42 +1049,26 @@ footer p {
 /* BRON voor Media Queries: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 @media (min-width: 900px) {
 
-    /* 1. De Container (article) positioneren we onderaan het scherm */
+    /* de afbeelding we onderaan het scherm */
     header article {
         position: absolute;
-        /* Maak hem los van de bovenkant */
         bottom: 3rem;
-        /* Zet hem 3rem (ong 48px) van de onderkant */
         left: 0;
         width: 100%;
-        /* Hij moet de volle breedte pakken */
-
-        /* Reset de mobiele instellingen */
         padding-top: 0;
-        /* Die 50vh van mobiel moet weg, anders zakt hij door de grond */
         padding-left: 3rem;
-        /* Iets meer ruimte links op grote schermen (mooier) */
-
-        /* BELANGRIJK: Maak rechts ruimte zodat tekst niet achter het blokje verdwijnt */
         padding-right: 350px;
     }
 
-    /* 2. Het Witte Blokje (De Link) naar rechts duwen */
+    /* 2. Het Witte Blokje naar rechtsss */
     header article>a {
         position: absolute;
-        /* We halen hem uit de tekststroom */
         right: 3rem;
-        /* Helemaal rechts (met 3rem afstand van de rand) */
         bottom: 0;
-        /* Op dezelfde hoogte als de onderkant van de tekst */
-
         width: 300px;
-        /* Vaste breedte geven zodat het er strak uitziet */
         margin: 0;
-        /* Marges resetten */
     }
 
-    /* 3. Optioneel: De titel iets groter maken op PC */
     header article h2 {
         font-size: 3rem;
         max-width: 500px;                /*hierdoor begint hij op de vorlgende regel 8*/
@@ -1115,7 +1078,6 @@ footer p {
 
     section:first-of-type>article {
         display: grid;
-        /* AANGEPAST: Kolom 1 is nu vast 10rem. Dit voorkomt schuiven! */
         grid-template-columns: 10rem 1fr 45rem;
 
         grid-template-rows: auto auto auto auto;
@@ -1125,7 +1087,7 @@ footer p {
         padding-right: 2rem;
     }
 
-    /* --- LINKER KANT (Kolom 1 - Geïsoleerd) --- */
+    /* linker kan eerste section */
 
     section:first-of-type>article>h3 {
         grid-column: 1;
@@ -1134,7 +1096,7 @@ footer p {
         font-size: 0.5rem;
         text-align: left;
         padding-left: 5.5rem;
-        width: 7rem;                            /* Zorgt dat tekst breekt ("WHEN PERFECTION...") */
+        width: 7rem;                            
         line-height: 1.4;
     }
 
@@ -1151,12 +1113,12 @@ footer p {
         grid-row: 3;
         width: 4rem;
         height: auto;
-        align-self: start;                     /* VERANDERD: 'Start' zorgt dat hij bovenin hangt (tegen de span aan) */
+        align-self: start;                    
         margin-left: 5rem;
         margin-top: -5rem;
     }
 
-    /* --- RECHTER KANT (Kolom 3 - Blijft staan) --- */
+    /*  Rechter kolom*/
 
     section:first-of-type>article>h4 {
         grid-column: 3;
@@ -1207,7 +1169,7 @@ footer p {
     /* BRON voor float layout (ouderwets maar werkt): https://www.w3schools.com/css/css_float.asp */
     section:nth-of-type(2) {
         float: left;
-        width: calc(40% - 6.5rem);           /* Berekening: 50% van scherm - 5.5rem marge links - 1rem tussenruimte */
+        width: calc(40% - 6.5rem);           /*  50% van scherm - 5.5rem marge links - 1rem tussenruimte */ /*leg nog uit met bron*/
         margin-left: 5.5rem;
         margin-right: 0;
         margin-bottom: 4rem;
@@ -1216,12 +1178,12 @@ footer p {
         box-sizing: border-box;
     }
 
-    /* Titel boven de kaart verbergen (zoals op screenshot) */
+    /* Titel boven de afbeelding verbergen*/
     section:nth-of-type(2)>h2 {
         display: none;
     }
 
-    /* De Kaart zelf (Article) */
+    /* De adbeeldig zelf article*/
     section:nth-of-type(2)>article {
         width: 100%;
         aspect-ratio: 3/4;
@@ -1229,9 +1191,9 @@ footer p {
     }
 
 
-    /* --- SECTIE 3: VIDEO (RECHTS) --- */
+    /* section 3 videos rechts neer zetten */
     section:nth-of-type(3) {
-        float: right;                 /* Laat hem rechts staan */
+        float: right;                 /* Laat hem rechts staan, leg float uit */
         width: calc(60% - 6.5rem);
         margin-left: 0;
         margin-top: 8rem;
@@ -1244,7 +1206,7 @@ footer p {
         display: none;
     }
 
-    /* Video Styling (zodat hij lijkt op de kaart links) */
+    /* Video Styling*/
     section:nth-of-type(3)>video {
         width: 100%;
         height: 100%;
@@ -1252,25 +1214,25 @@ footer p {
         object-fit: cover;
     }
 
-
+*section
     section:nth-of-type(4) {
         clear: both;
         width: 100%;
         padding-top: 4rem;
     }
 
-    /* 1. Titel ("H-POWER SERIES") uitlijnen */
+    /*  Titel  h2 uitlijnen */
     section:nth-of-type(4)>h2 {
         margin-left: 5.5rem;
         margin-bottom: 2rem;
         font-size: 1.2rem;
     }
 
-    /* 2. De Lijst (UL) ombouwen naar een Grid */
+    /*  Ul is een grid */
     section:nth-of-type(4)>ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;        /* 3 Gelijke kolommen */
-        gap: 2rem;                             /* Ruimte tussen de kolommen */
+        grid-template-columns: 1fr 1fr 1fr;        
+        gap: 2rem;                             
         padding-left: 5.5rem;
         padding-right: 5.5rem;
         overflow: visible;
@@ -1278,7 +1240,7 @@ footer p {
         padding-bottom: 0;
     }
 
-    /* 3. De Items (LI) resetten */
+    /* 3. de dingen in li reset*/
     section:nth-of-type(4)>ul>li {
         width: 100%;
         max-width: none;         /* limiet wrg dus niet mer afhankelijk*/
@@ -1292,13 +1254,12 @@ footer p {
         object-fit: cover;
     }
 
-    /* 5. DE TITEL OP DE AFBEELDING (H3) - GECENTREERD */
+    /* titel op de afbeelding section 4 h3 */
     section:nth-of-type(4) ul li h3 {
-        /* Positie: in het midden van de 'li' */
         position: absolute;
         top: 25%;
         left: 25%;
-        transform: translate(-50%, -50%);         /* Trucje om exact het midden te pakken */
+        transform: translate(-50%, -50%);         /* Trucje om exact het midden te pakken ...pak bron ngo!!!! */
         width: 100%;
         margin: 0;
         padding: 0;
@@ -1318,7 +1279,7 @@ footer p {
         margin-bottom: 2rem;
     }
 
-    /* --- SECTIE 5: VIDEO (PC) --- */
+    /* section 5 video */
 
     section:nth-of-type(5) {
         position: relative;
@@ -1334,7 +1295,7 @@ footer p {
         height: 100%;
         object-fit: cover;
         z-index: 0;
-        box-sizing: border-box; /* DE SIMPELE OPLOSSING:Zorgt dat padding IN de 100% zit */
+        box-sizing: border-box;          /*Zorgt dat padding daarin de 100% zit */
         padding-top: 6rem;
         padding-left: 5.5rem;
       padding-right: 5.5rem;
@@ -1344,14 +1305,10 @@ footer p {
     section:nth-of-type(5)>h2 {
         position: absolute;
         top: 0;
-        /* Start helemaal bovenaan */
         left: 7rem;
-        /* Op de lijn */
         margin-top: 1.5rem;
-        /* Een beetje ruimte vanaf de rand */
         color: var(--wit);
         font-size: 0.88rem;
-        /* Iets kleiner en strakker (zoals screenshot) */
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -1362,55 +1319,49 @@ footer p {
     section:nth-of-type(5)>p {
         position: absolute;
         left: 5.5rem;
-        /* De vaste lijn links */
         color: var(--wit);
         margin: 0;
         z-index: 2;
         text-transform: uppercase;
     }
 
-    /* 4. De Titel: "PRO BOOT" (Staat hoger) */
+    /* 4. De titel pr boot */
     section:nth-of-type(5)>p:nth-of-type(1) {
-        /* HOOGTE AANGEPAST: Staat nu hoger dan de ondertitel */
         font-size: 2rem;
         font-weight: 700;
         line-height: 1;
         margin-bottom: 1rem;
     }
 
-    /* 5. De Ondertitel: "Your Step..." (Staat lager) */
+    /* 5. De Ondertitel Your Step */
     section:nth-of-type(5)>p:nth-of-type(2) {
-        /* Lager dan de titel -> Dus eronder */
         font-size: 0.7rem;
         letter-spacing: 0.05em;
         margin-bottom: -8rem;
     }
 
 
-    /* 6. */
+    /* 6 products swiper*/
    section:nth-of-type(6) > ul > li {
-        /* AANGEPAST: Was 50vw breed, nu 35vw (smaller) */
         flex: 0 0 35vw;
         flex-direction: column;
-        /* AANGEPAST: Was 60vh hoog, nu 40vh (lager) */
         height: 40vh;
         left: 4em;
     }
     
     section:nth-of-type(6) > ul > li p {
-        /* AANGEPAST: Tekst mee verkleind van 3rem naar 1.8rem */
         font-size: 1.8rem;
         left: 2rem;
     }
 
-/* --- SECTIE 7: NIEUWSBRIEF (PC Versie) --- */
+/* -forms voor pc*/
 
 section:nth-of-type(7) {
     display: grid;
     grid-template-columns: 1.2fr 1fr; 
     gap: 1rem 5rem;
     
-    text-align: left;
+    text-align: left;   
     align-items: center;
     
     padding: 4rem 5.5rem;
@@ -1474,39 +1425,31 @@ section:nth-of-type(7) form button {
 }
 
 
-/* --- SECTIE 8: SLIDER (PC STYLING) --- */
+/*section slider 8*/
 
     section:nth-of-type(8) {
-        /* We zorgen dat de sectie zelf geen zij-padding heeft... */
         padding-left: 4.7rem;
         padding-right: 0;
     }
 
-    section:nth-of-type(8) ul {
-        /* ...maar we zetten de 5.5rem padding IN de slider. 
-           Zo begint de eerste kaart precies op de goede lijn. */
+    section:nth-of-type(8) ul {              /*zet bron er nog bij */
         padding-left: 5.5rem; 
         padding-right: 5.5rem;
-        gap: 2rem; /* Iets meer ruimte tussen de kaarten op PC */
+        gap: 2rem;
     }
 
-    section:nth-of-type(8) ul li {
-        /* De kaarten mogen op PC iets breder zijn */
+    section:nth-of-type(8) ul li {    
         width: 30vw; 
         max-width: 450px;
-        /* Start-alignment zorgt dat hij bij het scrollen op de 5.5rem lijn stopt */
         scroll-snap-align: start; 
     }
-
-    /* De afbeelding in de kaart iets hoger maken voor PC */
     section:nth-of-type(8) ul li > img:first-child {
         height: 250px;
     }
 
 
-    /* 1. De Container (Sectie) */
+    /* section 9 */
     section:nth-of-type(9) {
-        /* Padding: 4rem boven/onder, 5.5rem links/rechts voor de randen */
         padding: 4rem 5.5rem; 
         display: grid;
         grid-template-columns: 1.2fr 1.2fr; 
@@ -1517,7 +1460,7 @@ section:nth-of-type(7) form button {
 
     /* 2. De Titel (H3) */
     section:nth-of-type(9) > h3 {
-        grid-column: 1 / -1;  /* Neemt de volledige breedte in boven de twee kolommen */
+        grid-column: 1 / -1;             /* Neemt de volledige breedte in boven de twee kolommen */
         margin-bottom: 2rem;
         font-size: 1rem;
         letter-spacing: 0.1em;
@@ -1525,21 +1468,21 @@ section:nth-of-type(7) form button {
         color: var(--wit);
     }
 
-    /* 3. De Kaarten (Articles) */
+    /* articles afbeeldingen */
     section:nth-of-type(9) article {
         height: auto; 
         margin-bottom: 0;
         position: relative;
     }
 
-    /* --- DE GROTE LINKER KAART (FIND A RETAILER) --- */
+    /* de grote linker afbeeldingen  */
     section:nth-of-type(9) article:first-of-type {
         grid-column: 1;
         grid-row: 2 / 4; 
         aspect-ratio: 1 / 1; /*voor vierkante vorm*/
     }
 
-    /* --- DE TWEE RECHTER KAARTEN --- */
+    /* de twee rechter afbeeldingen */
     section:nth-of-type(9) article:nth-of-type(2),
     section:nth-of-type(9) article:nth-of-type(3) {
         grid-column: 2;
@@ -1556,19 +1499,18 @@ section:nth-of-type(7) form button {
 
 
     footer {
-        padding: 5rem 5.5rem 3rem 5.5rem; /* Ruimte aan de zijkanten */
+        padding: 5rem 5.5rem 3rem 5.5rem; 
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr; /* Kolomverdeling voor tekst */
-        gap: 2rem;
+        grid-template-columns: 1fr 1fr 2fr; 
     }
 
-    /* --- DE BALK MET SOCIALS EN SELECT (OP 1 LIJN) --- */
+    /* social icons  */
     footer nav:nth-of-type(4) {
-        grid-column: 1 / -1; /* Over de hele breedte van de grid */
+        grid-column: 1 / -1; 
         margin-top: 5rem;
         display: flex;
-        justify-content: space-between; /* Drukt icons links en select rechts */
-        align-items: center;            /* Zet ze op dezelfde horizontale lijn */
+        justify-content: space-between; 
+        align-items: center;
     }
 
     /* De lijst met icoontjes */
@@ -1581,20 +1523,20 @@ section:nth-of-type(7) form button {
         list-style: none;
     }
 
-    /* HET SELECT ITEM (DE ENGELSE KNOP) */
+    /* engelse knop */
     footer nav:nth-of-type(4) select {
-        width: 240px;                   /* Breedte zoals op de afbeelding */
+        width: 240px;                  
         padding: 0.7rem 1rem;
         background-color: transparent;
         color: var(--wit);
-        border: 1px solid #444;        /* Het grijze randje van de afbeelding */
+        border: 1px solid #444;        
         font-family: var(--font-tekst);
         font-size: 0.85rem;
         cursor: pointer;
         margin-left: auto; 
     }
 
-    /* --- DE ONDERSTE BALK (LEGAL & COPYRIGHT) --- */
+    /* onder ste balk op 1 lij */
     footer nav:nth-of-type(5) {
         grid-column: 1 / -1;
         margin-top: 2.5rem;
