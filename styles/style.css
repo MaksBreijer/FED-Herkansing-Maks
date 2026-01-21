@@ -1214,7 +1214,7 @@ footer p {
         object-fit: cover;
     }
 
-*section
+/* section flider met verschillende ski*/
     section:nth-of-type(4) {
         clear: both;
         width: 100%;
@@ -1354,7 +1354,7 @@ footer p {
         left: 2rem;
     }
 
-/* -forms voor pc*/
+/* forms voor pc*/
 
 section:nth-of-type(7) {
     display: grid;
