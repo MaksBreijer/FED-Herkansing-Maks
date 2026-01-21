@@ -34,8 +34,6 @@ video {
 body {
     background-color: var(--zwart);
     color: var(--wit);
-    margin: 0;
-    padding: 0;
 }
 
 /* Zet standaard lettertypes goed */
@@ -269,7 +267,7 @@ section:nth-of-type(2)>article {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: calc(100% - 2rem);
+    width: calc(100% - 2rem);   /*born ai voor calc wellicht kijken of ik hier nog iets anders voor kan doen */
     margin: 0 auto;
     aspect-ratio: 3 / 4;
     padding: 1.3rem 1.5rem 1.5rem 1.5rem;
