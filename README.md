@@ -65,8 +65,11 @@ responsive
 
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
- 
-  <img src="images/Breakdown Hoofdstructuur.jpg" width="375px" alt="breakdown">
+
+  <img src="images/Breakdown Hoofdstructuur.jpg" width="400px" alt="breakdown">
+
+### Bevindingen
+Ik heb de breakdownschetsen in figma gemaakt en hierin de belangrijkste elementen ge-highlight! Denk aan de swiper, de forms.
 
 </details>
 
