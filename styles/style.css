@@ -30,6 +30,45 @@ video {
     --font-tekst: Arial, Helvetica, sans-serif;
 }
 
+
+/*-------Algemene class voor meerdere sections------*/
+
+.swiper {
+    display: flex;
+    overflow-x: auto;              /* Horizontaal scrollen */
+    scroll-snap-type: x mandatory; /* Klikt vast bij scrollen */
+    list-style: none;              /* Geen puntjes voor de lijst */
+    margin: 0;                     /* Standaard marge weg */
+    scrollbar-width: none;         /* Verberg scrollbar (Firefox) */
+}
+
+/* Verberg scrollbar (Chrome/Safari/Edge) */
+.swiper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ik had de classes helemaal door dus dacht ik wellicht kunnen die knoppen ook wel met classes */
+.btn-rood {
+    display: inline-block;        /* Zorgt dat padding werkt */
+    background-color: var(--rood);
+    color: var(--wit);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;            /* Gemiddelde grootte */
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;       /* Standaard ruimte */
+    border: none;                 /* Voor <button> elementen */
+    cursor: pointer;              /* Handje voor <button> */
+    transition: background 0.3s;  /* Mooi effect bij hover */
+}
+
+
+
+
+
+
+
 /* Algemene pagina stijl */
 body {
     background-color: var(--zwart);
@@ -187,7 +226,6 @@ header article>a>p {
 
 /* section 1 */
 
-
 section:first-of-type>article {
     display: grid;
     grid-template-columns: auto 1fr;    /* BRON voor Grid: https://www.w3schools.com/css/css_grid.asp */
@@ -331,20 +369,12 @@ section:nth-of-type(2)>article>p {
     color: var(--wit);
 }
 
-/* Rode knop links onder */
+/* Rode knop links onder deze hoort bij de class! */
 section:nth-of-type(2)>article>a {
     position: relative;
     z-index: 3;
-    display: inline-block;
-    width: fit-content;
-    padding: 0.55rem 1.1rem;
-    background-color: var(--rood);
-    color: var(--wit);
-    text-decoration: none;
-    font-size: 0.75rem;
-    font-weight: 600;
+    padding: 0.55rem 1.1rem; /* Deze mag blijven als je hem iets kleiner wilt dan standaard */
     letter-spacing: 0.04em;
-    border-radius: 0.25rem;
 }
 
 
@@ -382,22 +412,15 @@ section:nth-of-type(4)>h2 {
     text-transform: uppercase;
 }
 
-/* De slider vormgeving en afstanden  */
-section:nth-of-type(4)>ul {
-    display: flex;
+ /* bron voor side scrollen: https://www.w3schools.com/css/css_overflow.asp */ 
+/* bron voor scroll snap: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type (geen goede w3schools hiervoor) */
+
+section:nth-of-type(4)>ul {   /* Dit is de swiper voor de class */
     gap: 1rem;
-    overflow-x: auto;   /* bron voor side scrollen: https://www.w3schools.com/css/css_overflow.asp */ 
     padding: 0 1rem 2rem 1rem;
-    list-style: none;
-    margin: 0;
-    scroll-snap-type: x mandatory;     /* bron voor scroll snap: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type (geen goede w3schools hiervoor) */
-    scrollbar-width: none;
 }
 
-section:nth-of-type(4)>ul::-webkit-scrollbar {
-    display: none;
-}
-
+/* vormgeving en afstanden  */
 /* De tabel waar alle info in staat ul li */
 section:nth-of-type(4)>ul>li {
     position: relative;
@@ -452,30 +475,21 @@ section:nth-of-type(4)>ul>li>p:nth-of-type(even) {
     border-bottom: 1px solid #252525;
 }
 
-/* De rode knop onderaan */
+/* De rode knop onderaan rest wordt toegevoegd door de class */
 section:nth-of-type(4)>ul>li>a {
-    display: block;
-    margin-top: 1.5rem;
+    display: block;        /* Zodat we width kunnen gebruiken omdat hijn niet helemaal full widt is...*/
+    width: 60%;            
+    margin-top: 1.5rem;    
     margin-bottom: 0;
-    width: 60%;
-    padding: 0.5rem 0;
-    background-color: var(--rood);
-    color: var(--wit);
-    text-decoration: none;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 4px;
+    text-align: center;    
 }
 
 
-
-/* SECTION 5: vieo en rode knop        */
+/* SECTION 5: vieo en rode knop  */
 
 section:nth-of-type(5) {
     position: relative;
-    height: 85vh;
+       height: 78vh;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -483,13 +497,6 @@ section:nth-of-type(5) {
     justify-content: flex-end;
     align-items: flex-start;
     padding: 0 1.5rem 3rem 1.5rem;
-}
-
-/* Maak de sectie wat kleiner op mobiele schermen */
-@media (max-width: 600px) {
-    section:nth-of-type(5) {
-        height: 78vh;
-    }
 }
 
 /* De video op de achtergrond */
@@ -530,12 +537,9 @@ section:nth-of-type(5)>p:nth-of-type(2) {
 /* De rode knop styling */
 section:nth-of-type(5)>a {
     position: relative;
-    display: block;
+    display: block;          /* Overschrijft de inline-block van de class */
     box-sizing: border-box;
-    width: 100%;
-    background-color: var(--rood);
-    border-radius: 4px;
-    text-decoration: none;
+    width: 100%;             /* Maakt hem schermbreed */
     padding: 0.50rem 4.5rem 2.5rem 0.80rem;
 }
 
@@ -551,7 +555,7 @@ section:nth-of-type(5)>a>h4 {
 
 /* Kleine tekst onder de titel in de rode knop */
 section:nth-of-type(5)>a>p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--wit);
     font-size: 0.65rem;
     font-weight: 200;
     text-transform: uppercase;
@@ -589,22 +593,10 @@ section:nth-of-type(6) {
     overflow: hidden;
 }
 
-/* De slider zelf */
 
-section:nth-of-type(6)>ul {
-    display: flex;
+section:nth-of-type(6)>ul { /* voor de class van de wiper*/
     gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
     padding: 1.3rem;
-    margin: 0;
-    list-style: none;
-    scrollbar-width: none;
-}
-
-/* Verberg de scrollbar */
-section:nth-of-type(6)>ul::-webkit-scrollbar {
-    display: none;
 }
 
 /* De losse items in de slider */
@@ -665,7 +657,7 @@ section:nth-of-type(7) video {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 3rem);
+    width: calc(100% - 0rem);
     height: 100%;
     object-fit: cover; 
     z-index: 0;
@@ -755,30 +747,15 @@ section:nth-of-type(7) form button {
     width: 100%;
     grid-column: 1 / -1;
     margin-top: 0.5rem;
-    
-    background-color: var(--rood);
-    color: var(--wit);
-    border: none;
-    padding: 1rem;
-    border-radius: 4px;
-    
-    font-weight: 200;
-    text-transform: uppercase;
-    font-size: 1rem;
+    padding: 1rem;           /* Deze knop is iets dikker dan de standaard */
+    font-size: 1rem;         /* En de tekst is groter */
     letter-spacing: 0.05em;
-    
+     /* Flexbox zorgt dat het pijltje en de tekst netjes naast elkaar staan */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.6rem;
-    cursor: pointer;
-    
-    transition: background-color 0.3s ease;
     box-sizing: border-box;
-}
-
-section:nth-of-type(7) form button:hover {
-    background-color: #c40f1e;
 }
 
 /* Pijltje in de knop */
@@ -788,21 +765,10 @@ section:nth-of-type(7) form button::after {
     font-weight: bold;
 }
 
-/* Container van de slider */
-section:nth-of-type(8) ul {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    padding: 0 1.5rem 2rem 2.5rem;
-    list-style: none;
-    margin: 0;
-    scroll-snap-type: x mandatory;    /* Slider functionaliteit gebaseerd op CSS Scroll Snap: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type ai geholpen zelf aanpast*/
-    scrollbar-width: none;
-}
-
-/* Verberg scrollbar in webkit browsers */
-section:nth-of-type(8) ul::-webkit-scrollbar {
-    display: none;
+/*----Section 8 ook swiper-------- */
+section:nth-of-type(8)>ul { /* voor de class van de wiper*/
+    gap: 1rem;
+    padding: 1.3rem;
 }
 
 /* Individuele card/blok */
@@ -1227,13 +1193,12 @@ footer p {
 
     /*  Ul is een grid */
     section:nth-of-type(4)>ul {
-        display: grid;
+        display: grid;   /*Omdat hij voor pc in grid komt overruled hij nu en dat is goed*/
         grid-template-columns: 1fr 1fr 1fr;        
         gap: 2rem;                             
         padding-left: 5.5rem;
         padding-right: 5.5rem;
-        overflow: visible;
-        scroll-snap-type: none;
+        scroll-snap-type: none; /*hij kan gaan stotteren ander */
         padding-bottom: 0;
     }
 

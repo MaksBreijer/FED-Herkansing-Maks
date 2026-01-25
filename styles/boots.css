@@ -31,6 +31,43 @@ html, body {
     --font-tekst: Arial, Helvetica, sans-serif;
 }
 
+/*classes ook hier toevoegen*/
+
+.swiper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    list-style: none;
+    margin: 0;
+    scrollbar-width: none;
+}
+
+.swiper::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-rood {
+    display: inline-block;
+    background-color: var(--rood);
+    color: var(--wit);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+
+
+
+
+
+
 /* ALGEMENE STIJL */
 body {
     background-color: var(--zwart);
@@ -434,15 +471,9 @@ section:nth-of-type(6) > p {
 }
 
 section:nth-of-type(6) ul {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 0 10vw 2rem 10vw; 
+ padding: 0 10vw 2rem 10vw; 
     margin: 2rem 0 0 0;
-    list-style: none;
-    scroll-snap-type: x mandatory; 
 }
-section:nth-of-type(6) ul::-webkit-scrollbar { display: none; }
 
 section:nth-of-type(6) li {
     flex: 0 0 auto;
@@ -666,19 +697,9 @@ section:nth-of-type(9) h2 {
 
 /* De slider zelf (UL) */
 section:nth-of-type(9) > ul {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+gap: 1rem;
     padding: 1.3rem;
     margin: 0;
-    list-style: none;
-    scrollbar-width: none; /* Firefox scrollbar weg */
-}
-
-/* Verberg de scrollbar (Chrome/Safari) */
-section:nth-of-type(9) > ul::-webkit-scrollbar {
-    display: none;
 }
 
 /* De losse items (LI) in de slider */
@@ -716,8 +737,7 @@ section:nth-of-type(9) > ul > li p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Maak de slider items groter op grotere schermen */
-@media (min-width: 768px) {
+
     section:nth-of-type(9) > ul > li {
         flex: 0 0 50vw;
         height: 60vh;
@@ -727,7 +747,6 @@ section:nth-of-type(9) > ul > li p {
         font-size: 3rem;
         left: 3rem;
     }
-}
 
 
 /* 10 Section 9 laatste nieuws */
@@ -1127,7 +1146,7 @@ section:nth-of-type(7) {
         line-height: 1.5;
         color: #b8b8b8;
         max-width: 30rem;
-
+    }
 
     /*fullspecs 8*/
 section:nth-of-type(8) > h2 {
@@ -1278,5 +1297,4 @@ section:nth-of-type(8) > h2 {
         font-size: 0.8rem;
         text-align: right;
     }
-}
 }

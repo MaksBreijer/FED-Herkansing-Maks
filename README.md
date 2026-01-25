@@ -84,7 +84,9 @@ Ik heb de breakdownschetsen in figma gemaakt en hierin de belangrijkste elemente
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik twijfelde een beetje met me html structuur, hoeveel section moet nu gaan gebruiken, wordt het niet teveel? Daarom de ss hier onder zie je dat k heb geprobeerd de header wat uit te breiden om er meer in te stoppen. 
+
+  <img src="images/header.png" width="400px" alt="headerhtml">
 
 
   ### Agenda voor meeting
@@ -99,10 +101,8 @@ Ik heb de breakdownschetsen in figma gemaakt en hierin de belangrijkste elemente
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - punt 1: Breakdown schetsen waren duidelijk, zorg wel dat je het simpel voor jezelf houdt. 
+  - punt 2: Je website is goed genoeg, prima uitdagend maar dat mag ook wel met dit vak.
 
 </details>
 
