@@ -53,7 +53,7 @@ responsive
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   
-<img src="images/wcag checklist 1.png" width="200px" alt="Eerste wcag checklist">
+<img src="images/wcag checklist 1.png" width="350px" alt="Eerste wcag checklist">
 
 ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
