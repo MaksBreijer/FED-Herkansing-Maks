@@ -16,14 +16,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
-
+ Maks Breijer
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
-
+Blauw
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
- 
+responsive 
 </details>
 
 
@@ -40,11 +37,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="images/FireShot Capture 003 - VAN DEER-Red Bull Sports – Ski, Boots, Ski Gear, and Apparel – VAN _ - [vandeer-redbull-sports.com].png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="images/Bootspagina!.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
