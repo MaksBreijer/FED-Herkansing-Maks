@@ -250,8 +250,7 @@ section:first-of-type>article>a {
 }
 
 
-
-/* 4. SECTION 2: PRODUCT( HIGHLIGHT vierkant)     */
+/* section  2 prodcuten     */
 
 section:nth-of-type(2)>h2 {
     margin: 3rem 1rem 1.5rem;
@@ -301,7 +300,7 @@ section:nth-of-type(2)>article::before {       /* BRON voor Gradients: https://w
             rgba(40, 40, 40, 0.8) 85%,
             var(--zwart-kaart) 100%);
     z-index: 1;
-    pointer-events: none;
+    pointer-events: none;        /* dit zorgt ervoor dat de overlay de klik-acties op de knoppen eronder niet blokkeert*/
 }
 
 /* tekst/ box links boven */
@@ -722,7 +721,7 @@ section:nth-of-type(7) form {
     max-width: 300px;
     
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;  /*links staat het formulier en tweede fr staat de formm zelf */
     gap: 1rem;                            /* Layout structuur gegenereerd met hulp van AI chatgpt.com om een responsive grid voor het formulier te maken, daarna zelf aangepast voor de styling. */
 }
 
@@ -1164,9 +1163,9 @@ footer p {
 
 
     /* --- SECTIE 2: SKI KAART (LINKS) --- */
-    /* BRON voor float layout (ouderwets maar werkt): https://www.w3schools.com/css/css_float.asp */
+    /* Ik had moeite om de twee kolommen precies de juiste breedte te geven met Flexbox, dus ik heb een 'ouderwetse' float gebruikt om de verhouding 40/60 te forceren. voor float layout (ouderwets maar werkt): https://www.w3schools.com/css/css_float.asp */
     section:nth-of-type(2) {
-        float: left;
+        float: left;              /*kijk hier nog extra naar*/
         width: calc(40% - 6.5rem);           /*  50% van scherm - 5.5rem marge links - 1rem tussenruimte */ /*leg nog uit met bron*/
         margin-left: 5.5rem;
         margin-right: 0;
