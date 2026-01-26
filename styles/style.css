@@ -336,6 +336,10 @@ header article>a>p {
 
 /* section 1 */
 
+section:first-of-type> h2 {
+display: none;
+}
+
 section:first-of-type>article {
     display: grid;
     grid-template-columns: auto 1fr;    /* BRON voor Grid: https://www.w3schools.com/css/css_grid.asp */
@@ -513,6 +517,9 @@ section:nth-of-type(4) {
     overflow: hidden;
 }
 
+section:nth-of-type(4)>h3 {
+   display: none;
+}
 section:nth-of-type(4)>h2 {
     color: var(--wit);
     margin: 1rem;
@@ -1338,9 +1345,6 @@ header nav {
         grid-column: 1 / 13;
     }
 
-    /* 3. SECTIE 2 & 3: Hier vervangen we de float door grid-posities */
-    
-    /* Sectie 2 (Ski kaart): van lijn 2 tot lijn 6 (4 kolommen breed) */
     /* Bron voor Grid-lijnen: https://www.w3schools.com/css/css_grid_item.asp */
     section:nth-of-type(2) {
         grid-column: 2 / 6; 
@@ -1715,5 +1719,4 @@ section:nth-of-type(7) form button {
         font-size: 0.8rem;
         text-align: right;
     }
-}
 }
