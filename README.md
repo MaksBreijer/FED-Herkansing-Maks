@@ -33,14 +33,14 @@ responsive
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+[  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontw](https://vandeer-redbull-sports.com/en)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+ home pagina
   <img src="images/homepagina1.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+boots pagina 
   <img src="images/Bootspagina!.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
