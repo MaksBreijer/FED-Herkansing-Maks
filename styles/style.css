@@ -336,8 +336,8 @@ header article>a>p {
 
 /* section 1 */
 
-section:first-of-type> h2 {
-display: none;
+section:first-of-type> h2{
+    display: none;
 }
 
 section:first-of-type>article {
@@ -517,9 +517,7 @@ section:nth-of-type(4) {
     overflow: hidden;
 }
 
-section:nth-of-type(4)>h3 {
-   display: none;
-}
+
 section:nth-of-type(4)>h2 {
     color: var(--wit);
     margin: 1rem;
@@ -595,7 +593,7 @@ section:nth-of-type(4)>ul>li>p:nth-of-type(even) {
 /* De rode knop onderaan rest wordt toegevoegd door de class */
 section:nth-of-type(4)>ul>li>a {
     display: block;        /* Zodat we width kunnen gebruiken omdat hijn niet helemaal full widt is...*/
-    width: 60%;            
+    width: 70%;            
     margin-top: 1.5rem;    
     margin-bottom: 0;
     text-align: center;    
@@ -710,6 +708,9 @@ section:nth-of-type(6) {
     overflow: hidden;
 }
 
+section:nth-of-type(6) h3 {
+    display: none;
+}
 
 section:nth-of-type(6)>ul { /* voor de class van de wiper*/
     gap: 1rem;
@@ -1344,6 +1345,7 @@ header nav {
     main > section {
         grid-column: 1 / 13;
     }
+
 
     /* Bron voor Grid-lijnen: https://www.w3schools.com/css/css_grid_item.asp */
     section:nth-of-type(2) {
