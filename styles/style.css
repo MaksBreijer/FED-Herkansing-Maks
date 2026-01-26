@@ -24,6 +24,7 @@ video {
     --zwart-licht: #1a1a1a;
     --wit: #ffffff;
     --grijs: #a5a5a5;
+     --lichtgrijs:#f7f7f7;
     --donker-blauw: #2c3e50;
     --lijntje: rgba(255, 255, 255, 0.2);
     --font-titel: "gotham", sans-serif;
@@ -99,12 +100,10 @@ h1 {
     left: -9999px;
 }
 
-
-
 /* 2. Header (video + navigatie) */
 
 header {
-    position: relative;
+    position: static;
     min-height: 100vh;
     overflow: hidden;
 }
@@ -114,13 +113,13 @@ header {
 header video {
     position: absolute;
     inset: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     object-fit: cover;
     z-index: 1;
 }
 
-/* navgatie balk */
+/* Navigatie balk */
 /* bron voor flexbox: https://www.w3schools.com/css/css3_flexbox.asp */
 header nav {
     position: absolute;
@@ -138,19 +137,131 @@ header nav img {
     height: 35px;
 }
 
-/* De Menu knop rechtsboven */
-header nav a:last-child {
+/* Hamburger Menu knop */
+#open-menu {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid var(--lijntje);
     color: var(--wit);
     padding: 0.6rem 1rem;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
-    text-decoration: none;
+    cursor: pointer;
     transition: background 0.3s;
+    font-family: var(--font-titel);
 }
 
-/* witte tekst blok  */
+/* Mobiele Menu Lijst Styling (Slide-in van rechts) */
+/* Bron voor transform & transition: https://www.w3schools.com/css/css3_2dtransforms.asp */
+/* Bron voor fixed position: https://www.w3schools.com/css/css_positioning.asp */
+header nav ul {
+    position: fixed; /* Haalt het menu uit de flow voor iPhone SE stabiliteit */
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--wit); 
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out; /* Volgens de Sanne methode */
+    visibility: hidden; /* Zorgt dat het menu niet stoort als het dicht is */
+}
+
+header nav ul.toon-menu {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* De bovenste witte balk (Logo links, CLOSE rechts) */
+/* bron voor flexbox: https://www.w3schools.com/css/css3_flexbox.asp */
+header nav ul li.sluit-item {
+    display: flex;
+    justify-content: space-between; /* Drukt logo en knop uit elkaar */
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--wit);
+    border-bottom: 1px solid #eee;
+}
+
+/* Zorg dat de link om het logo GEEN achtergrond, rand OF pijl heeft */
+header nav ul li.sluit-item a {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* NIEUW: Dit verwijdert specifiek de pijl bij het logo in het menu */
+header nav ul li.sluit-item a::after {
+    display: none;
+    content: none;
+}
+
+header nav ul li.sluit-item img {
+    height: 35px;
+}
+
+/* De CLOSE knop: Kaal zonder achtergrond of rand */
+#sluit-menu {
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--zwart);
+    font-family: var(--font-titel);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+/* Het label 'Products' */
+header nav ul li:nth-child(2) {
+    padding: 2rem 1.5rem 0.5rem;
+    color: var(--grijs);
+    font-family: var(--font-tekst);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header nav ul li:nth-child(n+3) {
+    padding: 0.4rem 1rem;
+}
+
+header nav ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lichtgrijs);
+    color: var(--zwart);
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* De pijl MET wit blokje (alleen voor de product-links) */
+header nav ul li a::after {
+    content: '→';
+    color: var(--zwart);
+    background-color: var(--wit);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem; 
+    height: 2.2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+/* Witte tekst blok in header */
 header article {
     position: relative;
     z-index: 10;
@@ -159,7 +270,7 @@ header article {
     padding-right: 1.5rem;
 }
 
-/* Labeltje "nummersL" */
+/* Labeltje "nummers" */
 header article>p:first-of-type {
     display: inline-block;
     background: var(--lijntje);
@@ -170,7 +281,7 @@ header article>p:first-of-type {
     letter-spacing: 0.1em;
 }
 
-/* h2 titel header*/
+/* h2 titel header */
 header article h2 {
     color: var(--wit);
     font-size: 2rem;
@@ -181,7 +292,7 @@ header article h2 {
     margin-bottom: 2rem;
 }
 
-/* Witte blok */
+/* Witte blok/link onderin header */
 header article>a {
     display: inline-flex;
     flex-direction: column;
@@ -222,7 +333,6 @@ header article>a>p {
     text-transform: uppercase;
     margin: 0;
 }
-
 
 /* section 1 */
 
@@ -1009,10 +1119,68 @@ footer p {
 
 
 
+
+
+
 /* BRON voor Media Queries: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 @media (min-width: 900px) {
 
-    /* de afbeelding we onderaan het scherm */
+header nav {
+        justify-content: flex-start; 
+        gap: 3rem;
+        z-index: 100; /* Zorgt dat de nav boven de fixed video blijft */
+    }
+
+    header nav ul {
+        position: static;    
+        transform: translateX(0); 
+        
+        /* DIT FIXT DE ZICHTBAARHEID: */
+        visibility: visible; /* Overschrijft de hidden status van mobiel */
+        
+        width: auto;
+        height: auto;
+        background: none; 
+        flex-direction: row; 
+        padding: 0;
+        border: none;
+        display: flex;       
+        gap: 2rem; 
+        margin: 0;                   
+    }
+
+    /* Verberg de mobiele logo-link en sluitknop in de lijst */
+    header nav ul li.sluit-item,
+    header nav ul li:nth-child(2) {
+        display: none;
+    }
+
+    /* Verberg de mobiele knoppen */
+    #open-menu, 
+    #sluit-menu {
+        display: none;
+    }
+
+    /* Reset de links naar ALLEEN witte tekst */
+    header nav ul li a {
+        background: none;        /* Haalt de lichtgrijze achtergrond weg */
+        padding: 0;              /* Haalt de padding van de kaarten weg */
+        color: var(--wit);       /* Maakt de tekst wit */
+        font-size: 0.8rem;       
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 0;        /* Reset de hoeken */
+    }
+
+    /* Haal het witte blokje met de pijl weg op PC */
+    header nav ul li a::after {
+        display: none;           /* Verbergt de pijl-blokjes volledig */
+        content: none;
+    }
+
+    /* ... rest van je bestaande desktop code ... */
+    /* --- BESTAANDE DESKTOP STYLING BEHOUDEN --- */
     header article {
         position: absolute;
         bottom: 3rem;
@@ -1023,7 +1191,6 @@ footer p {
         padding-right: 350px;
     }
 
-    /* 2. Het Witte Blokje naar rechtsss */
     header article>a {
         position: absolute;
         right: 3rem;
@@ -1034,7 +1201,36 @@ footer p {
 
     header article h2 {
         font-size: 3rem;
-        max-width: 500px;                /*hierdoor begint hij op de vorlgende regel 8*/
+        max-width: 500px;
+        margin-bottom: 20rem;
+    }
+
+    
+    /* --- BESTAANDE DESKTOP STYLING --- */
+
+    /* de tekstblokken onderaan het scherm positioneren */
+    header article {
+        position: absolute;
+        bottom: 3rem;
+        left: 0;
+        width: 100%;
+        padding-top: 0;
+        padding-left: 3rem;
+        padding-right: 350px;
+    }
+
+    /* Het Witte Blokje naar rechts verplaatsen */
+    header article>a {
+        position: absolute;
+        right: 3rem;
+        bottom: 0;
+        width: 300px;
+        margin: 0;
+    }
+
+    header article h2 {
+        font-size: 3rem;
+        max-width: 500px; /* Hierdoor breekt de tekst mooi af */
         margin-bottom: 20rem;
     }
 
@@ -1130,52 +1326,51 @@ footer p {
 
     /* --- SECTIE 2: SKI KAART (LINKS) --- */
     /* Ik had moeite om de twee kolommen precies de juiste breedte te geven met Flexbox, dus ik heb een 'ouderwetse' float gebruikt om de verhouding 40/60 te forceren. voor float layout (ouderwets maar werkt): https://www.w3schools.com/css/css_float.asp */
+
+    /* 1. We zetten de container (main) op grid */
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* We verdelen de breedte in 12 gelijke stukken */
+    }
+
+    /* 2. Alle andere secties moeten gewoon de hele breedte pakken (lijn 1 tot 13) */
+    main > section {
+        grid-column: 1 / 13;
+    }
+
+    /* 3. SECTIE 2 & 3: Hier vervangen we de float door grid-posities */
+    
+    /* Sectie 2 (Ski kaart): van lijn 2 tot lijn 6 (4 kolommen breed) */
+    /* Bron voor Grid-lijnen: https://www.w3schools.com/css/css_grid_item.asp */
     section:nth-of-type(2) {
-        float: left;              /*kijk hier nog extra naar*/
-        width: calc(40% - 6.5rem);           /*  50% van scherm - 5.5rem marge links - 1rem tussenruimte */ /*leg nog uit met bron*/
-        margin-left: 5.5rem;
-        margin-right: 0;
-        margin-bottom: 4rem;
-        margin-top: 8rem;
+        grid-column: 2 / 6; 
+        margin-bottom: 7rem;
         padding: 0;
-        box-sizing: border-box;
+        /* Breedte wordt nu automatisch bepaald door de grid-lijnen, calc() is niet meer nodig */
     }
 
-    /* Titel boven de afbeelding verbergen*/
-    section:nth-of-type(2)>h2 {
-        display: none;
+    /* Sectie 3 (Video): van lijn 6 tot lijn 12 (6 kolommen breed) */
+    section:nth-of-type(3) {
+        grid-column: 6 / 12;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+        /* De float is hier nu volledig weg */
     }
 
-    /* De adbeeldig zelf article*/
+    /* De styling voor de inhoud blijft hetzelfde */
     section:nth-of-type(2)>article {
         width: 100%;
         aspect-ratio: 3/4;
         margin: 0;
     }
 
-
-    /* section 3 videos rechts neer zetten */
-    section:nth-of-type(3) {
-        float: right;                 /* Laat hem rechts staan, leg float uit */
-        width: calc(60% - 6.5rem);
-        margin-left: 0;
-        margin-top: 8rem;
-        margin-bottom: 4rem;
-        box-sizing: border-box;
-    }
-
-    /* Titel boven video verbergen */
-    section:nth-of-type(3)>h2 {
-        display: none;
-    }
-
-    /* Video Styling*/
     section:nth-of-type(3)>video {
         width: 100%;
         height: 100%;
-        aspect-ratio: 3/4;               /* Forceerd dezelfde hoogte als de kaart links */
+        aspect-ratio: 3/4;
         object-fit: cover;
     }
+
 
 /* section flider met verschillende ski*/
     section:nth-of-type(4) {
@@ -1198,9 +1393,9 @@ footer p {
         gap: 2rem;                             
         padding-left: 5.5rem;
         padding-right: 5.5rem;
-        scroll-snap-type: none; /*hij kan gaan stotteren ander */
-        padding-bottom: 0;
-    }
+        scroll-snap-type: none; /*hij kan gaan stotteren ander *
+        padding-bottom: */}
+
 
     /* 3. de dingen in li reset*/
     section:nth-of-type(4)>ul>li {
@@ -1459,7 +1654,6 @@ section:nth-of-type(7) form button {
     }
 
 
-
     footer {
         padding: 5rem 5.5rem 3rem 5.5rem; 
         display: grid;
@@ -1521,4 +1715,5 @@ section:nth-of-type(7) form button {
         font-size: 0.8rem;
         text-align: right;
     }
+}
 }
