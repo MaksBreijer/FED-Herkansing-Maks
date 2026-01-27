@@ -51,18 +51,17 @@ video {
 
 /* Ik had de classes helemaal door dus dacht ik wellicht kunnen die knoppen ook wel met classes */
 .btn-rood {
-    display: inline-block;        /* Zorgt dat padding werkt */
+    display: inline-block;        
     background-color: var(--rood);
     color: var(--wit);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.8rem;            /* Gemiddelde grootte */
+    font-size: 0.8rem;            
     border-radius: 4px;
-    padding: 0.8rem 1.5rem;       /* Standaard ruimte */
-    border: none;                 /* Voor <button> elementen */
-    cursor: pointer;              /* Handje voor <button> */
-    transition: background 0.3s;  /* Mooi effect bij hover */
+    padding: 0.8rem 1.5rem;       
+    border: none;                 
+    cursor: pointer;             
 }
 
 

@@ -206,8 +206,16 @@ Ik twijfelde een beetje met me html structuur, hoeveel section moet nu gaan gebr
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="images/html.png" width="375px" alt="html afbeelding">
+  Eigenlijk ging de html wel goed, was even zoeken wat ik allemaal waar bij elkaar in een
+  section wilde stoppen. Soms moest ik ook even de html aanpassen anders werkte sommige css dingen niet
+  zoals in de header heb ik een hamburger menu toegevoegd, deze moest worden aangepast met onder andere 
+  classes.
 
+<img src="images/swiper.png" width="375px" alt="swiper afbeelding">
+De swiper had ik eerst per section gedaan toen ik dat vertelde kreeg ik de vraag waarom heb je eigenlijk niet gekozen om hier een class voor aan te maken, dat heb ik toen gedaan dus ik heb een swiper class aangemaakt, dat ging verassend goed dus toen kreeg ik weer een boost om verder te gaan. Toen heb ik ook een button class aangemaakt zodat ik de buttons makkelijk kan vormgeven met de basis, sommige sections verschillen dus moest ik ze wel nog aparte padding geven. 
+
+<img src="images/custom propperties.png" width="375px" alt="swiper afbeelding">
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
