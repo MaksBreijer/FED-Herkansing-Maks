@@ -269,8 +269,22 @@ Het is mij niet gelukt om dit scrollende te maken tijd te kort en ik wilde me me
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+1. Box-sizing: https://www.w3schools.com/css/css3_box-sizing.asp
+2. Variabelen: https://www.youtube.com/watch?v=PHO6TBq_auI
+3. Positionering: https://www.w3schools.com/css/css_positioning.asp
+4. Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
+5. Grid Layout: https://www.w3schools.com/css/css_grid.asp
+6. Menu-animatie: https://github.com/shooft
+7. Menu-indeling: https://chatgpt.com/
+8. Swiper Scroll Snap: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type
+9. Afbeelding-verloop (Masking): https://chatgpt.com/
+10. Tekst-selectie (nth-of-type): https://www.w3schools.com/cssref/sel_nth-of-type.php
+11. Gradients & Kleurverloop: https://www.w3schools.com/css/css3_gradients.asp
+12. Inklap-secties (Details/Summary): https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+13. Media Queries: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+14. Float Layout: https://www.w3schools.com/css/css_float.asp
+15. Grid Lijnen & Items: https://www.w3schools.com/css/css_grid_item.asp
+16. Algemene Classes: Besproken met Danny (gebruik van herbruikbare classes voor meerdere secties).
+17. Backdrop-filter (Blur): Toegevoegd met hulp van Danny (voor het doorzichtige effect in de header).
 
 </details>

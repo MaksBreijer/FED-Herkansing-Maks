@@ -1,15 +1,12 @@
-
 /*REMEDY*/
 
 /* Zorgt dat padding en randen niet de breedte verpesten */
-/* bron: https://www.w3schools.com/css/css3_box-sizing.asp */
 *,
 *::after,
-*::before {
+*::before {                        /* bron: https://www.w3schools.com/css/css3_box-sizing.asp */
     box-sizing: border-box;
 }
 
-/* Zorgt dat afbeeldingen nooit buiten hun bakje vallen */
 img,
 video {
     max-width: 100%;
@@ -17,12 +14,11 @@ video {
 
 /* De customproperties */
 :root {
-    /* Kleuren */
     --rood: #c4001a;
     --zwart: #000000;
     --zwart-kaart: #0b0b0b;
     --zwart-licht: #1a1a1a;
-    --wit: #ffffff;
+    --wit: #ffffff;             /*bron https://www.youtube.com/watch?v=PHO6TBq_auI */
     --grijs: #a5a5a5;
      --lichtgrijs:#f7f7f7;
     --donker-blauw: #2c3e50;
@@ -33,15 +29,15 @@ video {
 }
 
 
-/*-------Algemene class voor meerdere sections------*/
+/*Algemene class voor meerdere sections mag besproken met danny*/
 
 .swiper {
     display: flex;
     overflow-x: auto;              /* Horizontaal scrollen */
     scroll-snap-type: x mandatory; /* Klikt vast bij scrollen */
-    list-style: none;              /* Geen puntjes voor de lijst */
-    margin: 0;                     /* Standaard marge weg */
-    scrollbar-width: none;         /* Verberg scrollbar (Firefox) */
+    list-style: none;              
+    margin: 0;                     
+    scrollbar-width: none;         /* Verberg scrollbar handig voor firefox*/
 }
 
 /* Verberg scrollbar (Chrome/Safari/Edge) */
@@ -63,8 +59,6 @@ video {
     border: none;                 
     cursor: pointer;             
 }
-
-
 
 
 
@@ -109,25 +103,23 @@ header {
 }
 
 /* De video op de achtergrond */
-/* bron voor absolute positionering: https://www.w3schools.com/css/css_positioning.asp */
 header video {
     position: absolute;
     inset: 0;
-    width: 100vw;
+    width: 100vw;             /* bron voor absolute positionering: https://www.w3schools.com/css/css_positioning.asp */
     height: 100%;
     object-fit: cover;
     z-index: 1;
 }
 
 /* Navigatie balk */
-/* bron voor flexbox: https://www.w3schools.com/css/css3_flexbox.asp */
 header nav {
-    position: absolute;
+    position: absolute;     
     top: 0;
     left: 0;
     right: 0;
     padding: 1rem 1.5rem;
-    display: flex;
+    display: flex;                                 /* bron voor flexbox: https://www.w3schools.com/css/css3_flexbox.asp */
     justify-content: space-between;
     align-items: center;
     z-index: 100;
@@ -150,9 +142,10 @@ header nav img {
     font-family: var(--font-titel);
 }
 
-/* Mobiele Menu Lijst Styling (Slide-in van rechts) */
+
 /* Bron voor transform & transition: https://www.w3schools.com/css/css3_2dtransforms.asp */
 /* Bron voor fixed position: https://www.w3schools.com/css/css_positioning.asp */
+/* Bron voor hulp met hamburtger menu https://chatgpt.com/ */
 header nav ul {
     position: fixed; /* Haalt het menu uit de flow voor iPhone SE stabiliteit */
     top: 0;
@@ -176,18 +169,17 @@ header nav ul.toon-menu {
     visibility: visible;
 }
 
-/* De bovenste witte balk (Logo links, CLOSE rechts) */
-/* bron voor flexbox: https://www.w3schools.com/css/css3_flexbox.asp */
+/* De bovenste witte balk */
 header nav ul li.sluit-item {
     display: flex;
-    justify-content: space-between; /* Drukt logo en knop uit elkaar */
+    justify-content: space-between;   /* Drukt logo en knop uit elkaar bron: https://chatgpt.com/ */ 
     align-items: center;
     padding: 1rem 1.5rem;
     background: var(--wit);
     border-bottom: 1px solid #eee;
 }
 
-/* Zorg dat de link om het logo GEEN achtergrond, rand OF pijl heeft */
+/* Zorg dat the link om het logo rand heeft */
 header nav ul li.sluit-item a {
     background: none;
     border: none;
@@ -196,7 +188,7 @@ header nav ul li.sluit-item a {
     align-items: center;
 }
 
-/* NIEUW: Dit verwijdert specifiek de pijl bij het logo in het menu */
+/* haalt de de pijl weg bij het logo in het menu */
 header nav ul li.sluit-item a::after {
     display: none;
     content: none;
@@ -206,7 +198,7 @@ header nav ul li.sluit-item img {
     height: 35px;
 }
 
-/* De CLOSE knop: Kaal zonder achtergrond of rand */
+/* Zorg dat de clode knop geen achtergrond heeft. */
 #sluit-menu {
     background: none;
     border: none;
@@ -219,7 +211,7 @@ header nav ul li.sluit-item img {
     letter-spacing: 0.1em;
 }
 
-/* Het label 'Products' */
+/* de teskt Products in hamburger menu*/
 header nav ul li:nth-child(2) {
     padding: 2rem 1.5rem 0.5rem;
     color: var(--grijs);
@@ -246,7 +238,7 @@ header nav ul li a {
     font-size: 0.8rem;
 }
 
-/* De pijl MET wit blokje (alleen voor de product-links) */
+/* De vormgeving van blokje met de pijl erin. */
 header nav ul li a::after {
     content: '→';
     color: var(--zwart);
@@ -270,7 +262,7 @@ header article {
     padding-right: 1.5rem;
 }
 
-/* Labeltje "nummers" */
+/* blokje met getallen erin */
 header article>p:first-of-type {
     display: inline-block;
     background: var(--lijntje);
@@ -292,11 +284,11 @@ header article h2 {
     margin-bottom: 2rem;
 }
 
-/* Witte blok/link onderin header */
+/* doorzichtige blok in de header */
 header article>a {
     display: inline-flex;
     flex-direction: column;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);       /*blur toegevoegd met behulp van Danny */
     border: solid, var(--lijntje);
     padding: 1rem;
     width: 100%;
@@ -311,7 +303,7 @@ header article>a::after {
     position: absolute;
     right: 1rem;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);    /*bron van centreren in het midden https://www.w3schools.com/howto/howto_css_center_element.asp */
     font-size: 1rem;
     color: var(--rood);
 }
@@ -366,11 +358,14 @@ section:first-of-type>article>h3 {
     line-height: 1.3em;
 }
 
+/* cijfer naast handtekening span gebruikt 
+volgende keer zal ik P gebruiken... */
 section:first-of-type>article>span {
     grid-row: 2;
     grid-column: 2;
     margin-top: -2rem;
     font-size: 0.60rem;
+    font-family: var( --font-tekst);
 }
 
 /* Grote tekst eronder */
@@ -382,7 +377,7 @@ section:first-of-type>article>h4 {
     text-indent: 2rem;
 }
 
-/* Broodtekst en knop */
+/* de p teskt en de knop */
 section:first-of-type>article>p {
     grid-column: 1 / -1;
     margin-top: -2rem;
@@ -414,12 +409,12 @@ section:nth-of-type(2)>h2 {
     color: var(--wit);
 }
 
-/* De vierkant omlijning */
+/* De vierkant rand */
 section:nth-of-type(2)>article {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: calc(100% - 2rem);   /*bron ai voor calc wellicht kijken of ik hier nog iets anders voor kan doen */
+    width: calc(100% - 2rem);   /*bron https://chatgpt.com voor calc wellicht kijken of ik hier nog iets anders voor kan doen */
     margin: 0 auto;
     aspect-ratio: 3 / 4;
     padding: 1.3rem 1.5rem 1.5rem 1.5rem;
@@ -456,7 +451,7 @@ section:nth-of-type(2)>article::before {       /* BRON voor Gradients: https://w
     pointer-events: none;        /* dit zorgt ervoor dat de overlay de klik-acties op de knoppen eronder niet blokkeert*/
 }
 
-/* tekst/ box links boven */
+/* tekst in het vierkant links boven agile resposive */
 section:nth-of-type(2)>article>h3 {
     position: relative;
     z-index: 3;
@@ -493,7 +488,7 @@ section:nth-of-type(2)>article>a {
 }
 
 
-/*  section 3 VIDEO  (Hier moet alleen nog een pauze knop komen.)         */
+/* section 3 VIDEO  (Hier moet alleen nog een pauze knop komen.)     */
 
 section:nth-of-type(3) {
     margin: 1rem 1rem;
@@ -510,7 +505,8 @@ section:nth-of-type(3)>video {
 }
 
 
-/* section 4  slider        */
+/* section 4  slider   hier is een class opgezet alleen die is 
+specifieke css voor deze header    */
 
 section:nth-of-type(4) {
     background-color: var(--zwart);
@@ -537,14 +533,14 @@ section:nth-of-type(4)>ul {   /* Dit is de swiper voor de class */
 }
 
 /* vormgeving en afstanden  */
-/* De tabel waar alle info in staat ul li */
+/* hier staan alle info in onder de afbeelding */
 section:nth-of-type(4)>ul>li {
     position: relative;
     flex: 0 0 auto;
     width: 85vw;
     max-width: 350px;
     scroll-snap-align: center;
-    display: flex;
+    display: flex;   
     flex-direction: column;
 }
 
@@ -553,6 +549,8 @@ section:nth-of-type(4)>ul>li>img {
     aspect-ratio: 4 / 4.6;
     object-fit: cover;
     border-radius: 4px;
+    /* Bron: Gegenereerd met AI https://chatgpt.com/, omdat ik zelf echt niet was gekomen op het gebruik van een mask-gradient
+     om die afbeeldingen onderaan te laten vervagen. */
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
@@ -569,6 +567,8 @@ section:nth-of-type(4)>ul>li>h3 {
     z-index: 2;
 }
 
+/* Bron: Gebruik van nth-of-type(odd/even) geleerd via https://www.w3schools.com/cssref/sel_nth-of-type.php en verfijnd met https://gemini.google/students/. 
+Ik heb dit gebruikt omdat ik anders voor elk regeltje tekst in de slider een aparte class had moeten aanmaken, Dit is veel efficiënter. */
 section:nth-of-type(4)>ul>li>p:nth-of-type(odd) {
     color: #888;
     font-size: 1rem;
@@ -750,10 +750,10 @@ section:nth-of-type(6)>ul>li p {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-titel);
 }
 
-/* forms */                      /*voeg bron toe*/
+/* forms */                     
 section:nth-of-type(7) {
     position: relative;
     width: 100%;
@@ -765,7 +765,6 @@ section:nth-of-type(7) {
     justify-content: center;
     align-items: center;    
     text-align: center;     
-    
     background-color: var(--zwart);
     overflow-x: hidden;
 }
@@ -820,10 +819,6 @@ section:nth-of-type(7) p a {
     text-decoration: underline;
 }
 
-section:nth-of-type(7) p a:hover {
-    opacity: 0.8;
-}
-
 /* Het Formulier */
 section:nth-of-type(7) form {
     position: relative;
@@ -836,7 +831,7 @@ section:nth-of-type(7) form {
     gap: 1rem;                            /* Layout structuur gegenereerd met hulp van AI chatgpt.com om een responsive grid voor het formulier te maken, daarna zelf aangepast voor de styling. */
 }
 
-/* Alle input velden */
+/* Alle input velden in de html heb ik zo zet dat de teskt in iput */
 section:nth-of-type(7) form input {
     width: 100%;
     padding: 1.2rem;
@@ -848,12 +843,6 @@ section:nth-of-type(7) form input {
     outline: none;
     font-family: var(--font-tekst);
     box-sizing: border-box;
-}
-
-section:nth-of-type(7) form input::placeholder {
-    color: #999;
-    opacity: 1;
-    font-family: var(--font-tekst);
 }
 
 /* Email veld volledig breed */
@@ -880,17 +869,17 @@ section:nth-of-type(7) form button {
 /* Pijltje in de knop */
 section:nth-of-type(7) form button::after {
     content: '↗';
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
-/*----Section 8 ook swiper-------- */
+/*section 8 ook swiper*/
 section:nth-of-type(8)>ul { /* voor de class van de wiper*/
     gap: 1rem;
     padding: 1.3rem;
 }
 
-/* Individuele card/blok */
+/* opmaak van de verschillende blokken */
 section:nth-of-type(8) ul li {
     position: relative;
     flex: 0 0 auto;
@@ -926,7 +915,7 @@ section:nth-of-type(8) ul li p:first-of-type {
     width: fit-content;
 }
 
-/* Downhills */
+/* teskt Downhills */
 section:nth-of-type(8) ul li p:nth-of-type(2) {
     display: inline-block;
     background-color: var(--lichtgrijs);
@@ -939,7 +928,7 @@ section:nth-of-type(8) ul li p:nth-of-type(2) {
     width: fit-content;
 }
 
-/* Titel heading */
+/* tekt audi fos Sko */
 section:nth-of-type(8) ul li h2 {
     font-size: 1rem;
     font-weight: 800;
@@ -949,7 +938,7 @@ section:nth-of-type(8) ul li h2 {
     color: var(--zwart);
 }
 
-/* Datum (bijv. "Thursday, 04/12/2025") */
+/* Datum Thursday, 04/12/2025 */
 section:nth-of-type(8) ul li p:nth-of-type(3) {
     font-size: 0.75rem;
     font-weight: 700;
@@ -964,21 +953,23 @@ section:nth-of-type(8) ul li > img:last-of-type {
     margin: 1rem 0 0 1rem;
 }
 
-/* Locatie tekst (bijv. "Beaver Creek") */
+/* Locatie tekst: Beaver Creek") */
 section:nth-of-type(8) ul li p:last-of-type {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--zwart);
     margin: 0.2rem 1rem 1rem 1rem;
 }
-/* Section 9 laatste nieuws */
+
+
+/* Section 9 where to find us */
 section:nth-of-type(9) {
     padding: 1.25rem 1rem;
     font-family: sans-serif;
     box-sizing: border-box;
 }
 
-/* where to find us*/
+/* where to find us h3*/
 section:nth-of-type(9)>h3 {
     color: var(--wit);
     margin: 0 0 2.8rem 0;
@@ -987,7 +978,7 @@ section:nth-of-type(9)>h3 {
     text-transform: uppercase;
 }
 
-/*  article*/
+/* article*/
 section:nth-of-type(9) article {
     position: relative;
     height: 15rem;
@@ -999,7 +990,7 @@ section:nth-of-type(9) article {
     overflow: hidden;
 }
 
-/*  De Afbeelding  */
+/* De Afbeelding  */
 section:nth-of-type(9) article img {
     position: absolute;
     top: 0;
@@ -1010,19 +1001,10 @@ section:nth-of-type(9) article img {
     z-index: 1;
 }
 
-/* De Donkere (Schaduw) */
-section:nth-of-type(9) article::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
 
-/*  De Link Tekst */
+/* De Link Tekst */
 section:nth-of-type(9) article a {
-    position: relative;
+    position:absolute;
     z-index: 3;
 
     color: var(--wit);
@@ -1034,7 +1016,6 @@ section:nth-of-type(9) article a {
 }
 
 
-
 /* 10 Section 10 footer */
 footer {
     background-color: var(--zwart);
@@ -1043,7 +1024,7 @@ footer {
     font-family: var(--font-tekst);
 }
 
-/* Support, Stores, etc  */
+/* Support, Stores, etc  h4 teksten */
 footer h4 {
     color: #888;
     font-size: 0.8rem;
@@ -1055,7 +1036,7 @@ footer h4 {
 }
 
 
-/* --- STANDAARD LIJSTEN --- */
+/*  ul onder elkaar */
 footer ul {
     list-style: none;
     padding: 0;
@@ -1066,7 +1047,7 @@ footer li {
     margin-bottom: 0.8rem;
 }
 
-/* --- STANDAARD LINKS --- */
+/*  opmaak voor de links */
 footer a {
     color: var(--wit);
     text-decoration: none;
@@ -1076,7 +1057,7 @@ footer a {
     font-size: 0.8rem;
 }
 
-/* De taal bak */
+/*  opmaak taal balk*/
 footer select {
     width: 100%;
     background-color: var(--zwart);
@@ -1106,7 +1087,7 @@ footer nav:nth-of-type(4) img {
     opacity: 0.8;
 }
 
-/* --- SPECIFIEK: LEGAL LINKS (5e blok) --- */
+/* links cookie banner */
 footer nav:nth-of-type(5) ul {
     display: flex;
     flex-wrap: wrap;
@@ -1121,7 +1102,7 @@ footer nav:nth-of-type(5) a {
 
 /* Grijze tekst onderaan */
 footer p {
-    color: #666;
+    color: var(--grijs);
     font-size: 0.8rem;
     margin-top: 2rem;
 }
@@ -1131,7 +1112,7 @@ footer p {
 
 
 
-/* BRON voor Media Queries: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* bron voor Media Queries: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 @media (min-width: 900px) {
 
 header nav {
@@ -1143,8 +1124,6 @@ header nav {
     header nav ul {
         position: static;    
         transform: translateX(0); 
-        
-        /* DIT FIXT DE ZICHTBAARHEID: */
         visibility: visible; /* Overschrijft de hidden status van mobiel */
         
         width: auto;
@@ -1158,7 +1137,7 @@ header nav {
         margin: 0;                   
     }
 
-    /* Verberg de mobiele logo-link en sluitknop in de lijst */
+    /* verbegt het log oen links als je hamburger menu sluit of pc grootte zet */
     header nav ul li.sluit-item,
     header nav ul li:nth-child(2) {
         display: none;
@@ -1184,12 +1163,12 @@ header nav {
 
     /* Haal het witte blokje met de pijl weg op PC */
     header nav ul li a::after {
-        display: none;           /* Verbergt de pijl-blokjes volledig */
+        display: none;           
         content: none;
     }
 
-    /* ... rest van je bestaande desktop code ... */
-    /* --- BESTAANDE DESKTOP STYLING BEHOUDEN --- */
+    
+    /*header voor pc responsive*/
     header article {
         position: absolute;
         bottom: 3rem;
@@ -1214,35 +1193,7 @@ header nav {
         margin-bottom: 20rem;
     }
 
-    
-    /* --- BESTAANDE DESKTOP STYLING --- */
-
-    /* de tekstblokken onderaan het scherm positioneren */
-    header article {
-        position: absolute;
-        bottom: 3rem;
-        left: 0;
-        width: 100%;
-        padding-top: 0;
-        padding-left: 3rem;
-        padding-right: 350px;
-    }
-
-    /* Het Witte Blokje naar rechts verplaatsen */
-    header article>a {
-        position: absolute;
-        right: 3rem;
-        bottom: 0;
-        width: 300px;
-        margin: 0;
-    }
-
-    header article h2 {
-        font-size: 3rem;
-        max-width: 500px; /* Hierdoor breekt de tekst mooi af */
-        margin-bottom: 20rem;
-    }
-
+    /*heb het in een grid gezet zodat ze naast elkaar stonden */
 
     section:first-of-type>article {
         display: grid;
@@ -1286,7 +1237,7 @@ header nav {
         margin-top: -5rem;
     }
 
-    /*  Rechter kolom*/
+    /* Rechter kolom*/
 
     section:first-of-type>article>h4 {
         grid-column: 3;
@@ -1333,16 +1284,13 @@ header nav {
     }
 
 
-    /* --- SECTIE 2: SKI KAART (LINKS) --- */
+    /* -section 2 ski en video */
     /* Ik had moeite om de twee kolommen precies de juiste breedte te geven met Flexbox, dus ik heb een 'ouderwetse' float gebruikt om de verhouding 40/60 te forceren. voor float layout (ouderwets maar werkt): https://www.w3schools.com/css/css_float.asp */
 
-    /* 1. We zetten de container (main) op grid */
     main {
         display: grid;
-        grid-template-columns: repeat(12, 1fr); /* We verdelen de breedte in 12 gelijke stukken */
+        grid-template-columns: repeat(12, 1fr); 
     }
-
-    /* 2. Alle andere secties moeten gewoon de hele breedte pakken (lijn 1 tot 13) */
     main > section {
         grid-column: 1 / 13;
     }
@@ -1353,7 +1301,6 @@ header nav {
         grid-column: 2 / 6; 
         margin-bottom: 7rem;
         padding: 0;
-        /* Breedte wordt nu automatisch bepaald door de grid-lijnen, calc() is niet meer nodig */
     }
 
     /* Sectie 3 (Video): van lijn 6 tot lijn 12 (6 kolommen breed) */
@@ -1361,10 +1308,8 @@ header nav {
         grid-column: 6 / 12;
         margin-top: 8rem;
         margin-bottom: 4rem;
-        /* De float is hier nu volledig weg */
     }
 
-    /* De styling voor de inhoud blijft hetzelfde */
     section:nth-of-type(2)>article {
         width: 100%;
         aspect-ratio: 3/4;
@@ -1379,36 +1324,36 @@ header nav {
     }
 
 
-/* section flider met verschillende ski*/
+/* section slider met verschillende ski*/
     section:nth-of-type(4) {
         clear: both;
         width: 100%;
         padding-top: 4rem;
     }
 
-    /*  Titel  h2 uitlijnen */
+    /* Titel  h2 uitlijnen */
     section:nth-of-type(4)>h2 {
         margin-left: 5.5rem;
         margin-bottom: 2rem;
         font-size: 1.2rem;
     }
 
-    /*  Ul is een grid */
+    /* Ul is een flex voor swiper behoud op desktop */
     section:nth-of-type(4)>ul {
-        display: grid;   /*Omdat hij voor pc in grid komt overruled hij nu en dat is goed*/
-        grid-template-columns: 1fr 1fr 1fr;        
+        display: flex;       
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
         gap: 2rem;                             
         padding-left: 5.5rem;
         padding-right: 5.5rem;
-        scroll-snap-type: none; /*hij kan gaan stotteren ander *
-        padding-bottom: */}
+    }
 
 
-    /* 3. de dingen in li reset*/
+    /* li reset voor pc */
     section:nth-of-type(4)>ul>li {
-        width: 100%;
-        max-width: none;         /* limiet wrg dus niet mer afhankelijk*/
-        flex: none;
+        flex: 0 0 30vw;          /* Vaste breedte zodat het swipet */
+        width: auto;
+        max-width: 400px;
         margin-bottom: 2rem;
     }
 
@@ -1423,7 +1368,7 @@ header nav {
         position: absolute;
         top: 25%;
         left: 25%;
-        transform: translate(-50%, -50%);         /* Trucje om exact het midden te pakken ...pak bron ngo!!!! */
+        transform: translate(-50%, -50%);         
         width: 100%;
         margin: 0;
         padding: 0;
@@ -1451,7 +1396,7 @@ header nav {
         overflow: hidden;
     }
 
-    /* 2. De Video op de achtergrond */
+    /* De Video op de achtergrond */
     section:nth-of-type(5)>video {
         position: absolute;
         inset: 0;
@@ -1479,7 +1424,7 @@ header nav {
         z-index: 5;
     }
 
-    /* 3. Algemene styling voor de tekst links */
+    /*  de tekst links */
     section:nth-of-type(5)>p {
         position: absolute;
         left: 5.5rem;
@@ -1489,7 +1434,7 @@ header nav {
         text-transform: uppercase;
     }
 
-    /* 4. De titel pr boot */
+    /* 4. De titel pro boot */
     section:nth-of-type(5)>p:nth-of-type(1) {
         font-size: 2rem;
         font-weight: 700;
@@ -1497,7 +1442,7 @@ header nav {
         margin-bottom: 1rem;
     }
 
-    /* 5. De Ondertitel Your Step */
+    /* De Ondertitel Your Step */
     section:nth-of-type(5)>p:nth-of-type(2) {
         font-size: 0.7rem;
         letter-spacing: 0.05em;
@@ -1505,12 +1450,19 @@ header nav {
     }
 
 
-    /* 6 products swiper*/
+    /*  products swiper*/
+   section:nth-of-type(6) > ul {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-left: 5.5rem;
+   }
+
    section:nth-of-type(6) > ul > li {
         flex: 0 0 35vw;
         flex-direction: column;
         height: 40vh;
-        left: 4em;
+        margin-right: 1.5rem;
     }
     
     section:nth-of-type(6) > ul > li p {
@@ -1518,7 +1470,7 @@ header nav {
         left: 2rem;
     }
 
-/* forms voor pc*/
+/* forms voor pc */
 
 section:nth-of-type(7) {
     display: grid;
@@ -1592,19 +1544,22 @@ section:nth-of-type(7) form button {
 /*section slider 8*/
 
     section:nth-of-type(8) {
-        padding-left: 4.7rem;
+        padding-left: 0;
         padding-right: 0;
     }
 
-    section:nth-of-type(8) ul {              /*zet bron er nog bij */
+    section:nth-of-type(8) ul {              
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
         padding-left: 5.5rem; 
         padding-right: 5.5rem;
         gap: 2rem;
     }
 
     section:nth-of-type(8) ul li {    
-        width: 30vw; 
-        max-width: 450px;
+        flex: 0 0 25vw; 
+        min-width: 300px;
         scroll-snap-align: start; 
     }
     section:nth-of-type(8) ul li > img:first-child {
@@ -1622,7 +1577,7 @@ section:nth-of-type(7) form button {
         box-sizing: border-box;
     }
 
-    /* 2. De Titel (H3) */
+    /*  De Titel H3 */
     section:nth-of-type(9) > h3 {
         grid-column: 1 / -1;             /* Neemt de volledige breedte in boven de twee kolommen */
         margin-bottom: 2rem;
@@ -1632,7 +1587,7 @@ section:nth-of-type(7) form button {
         color: var(--wit);
     }
 
-    /* articles afbeeldingen */
+    /*  afbeeldingen in de article */
     section:nth-of-type(9) article {
         height: auto; 
         margin-bottom: 0;
@@ -1653,13 +1608,15 @@ section:nth-of-type(7) form button {
         aspect-ratio: 2 / 0.97; 
     }
 
-    /* 4. De Tekst in de foto's */
+    /* De Tekst in de foto's */
     section:nth-of-type(9) article a {
         font-size: 1.1rem;
         padding-left: 1.5rem;
         padding-bottom: 1.5rem;
     }
 
+
+    /* de footer*/ 
 
     footer {
         padding: 5rem 5.5rem 3rem 5.5rem; 
@@ -1718,7 +1675,7 @@ section:nth-of-type(7) form button {
 
     footer p {
         margin: 0;
-        color: #666;
+        color: var(--grijs);
         font-size: 0.8rem;
         text-align: right;
     }

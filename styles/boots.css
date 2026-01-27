@@ -14,9 +14,8 @@ html, body {
     width: 100%;
 }
 
-/*********************/
 /* CUSTOM PROPERTIES */
-/*********************/
+
 :root {
     --rood: #c4001a;
     --zwart: #000000;
@@ -31,7 +30,7 @@ html, body {
     --font-tekst: Arial, Helvetica, sans-serif;
 }
 
-/*classes ook hier toevoegen*/
+/*classes ook hier toevoegd*/
 
 .swiper {
     display: flex;
@@ -95,8 +94,8 @@ h1 {
     left: -9999px;
 }
 
-/* HEADER  */
-/* 2. Header (video + navigatie) */
+/* Header  */
+/* dit was voor een deel copy past met het hamburger menu */
 
 header {
     position: relative; /* */
@@ -134,7 +133,7 @@ header nav img {
     height: 2rem;
 }
 
-/* De Hamburger Menu knop (was a:last-child) */
+/* De Hamburger Menu knop  */
 #open-menu {
     color: white;
     background: rgba(255, 255, 255, 0.1);
@@ -148,9 +147,9 @@ header nav img {
     font-family: var(--font-titel);
 }
 
-/* Mobiele Menu Lijst Styling */
+/* header hamburger mobiel */
 header nav ul {
-    position: fixed; /* Haalt menu uit flow voor stabiliteit iPhone SE */
+    position: fixed; 
     top: 0;
     right: 0;
     width: 100%;
@@ -160,22 +159,22 @@ header nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; /* */
+    display: flex; 
     flex-direction: column;
-    transform: translateX(100%); /* */
+    transform: translateX(100%); 
     transition: transform 0.4s ease-in-out; /* Sanne methode */
-    visibility: hidden; /* Fix tegen verspringen op kleine schermen */
+    visibility: hidden; 
 }
 
 header nav ul.toon-menu {
-    transform: translateX(0); /* */
+    transform: translateX(0); 
     visibility: visible;
 }
 
-/* Witte bovenbalk in menu (Logo + CLOSE) */
+/* de witte balk met logo en close */
 header nav ul li.sluit-item {
-    display: flex; /* */
-    justify-content: space-between; /* */
+    display: flex; 
+    justify-content: space-between; 
     align-items: center;
     padding: 1rem 1.5rem;
     background: var(--wit);
@@ -188,7 +187,7 @@ header nav ul li.sluit-item a {
     padding: 0;
 }
 
-/* Pijl weghalen bij logo link */
+/* de pijl web bijclose en logo */
 header nav ul li.sluit-item a::after {
     display: none;
     content: none;
@@ -198,7 +197,7 @@ header nav ul li.sluit-item img {
     height: 35px;
 }
 
-/* Kale CLOSE knop */
+/* een lege close knop */
 #sluit-menu {
     background: none; /* */
     border: none; /* */
@@ -211,7 +210,7 @@ header nav ul li.sluit-item img {
     letter-spacing: 0.1em;
 }
 
-/* Product styling in menu */
+/* product*/
 header nav ul li:nth-child(2) {
     padding: 2rem 1.5rem 0.5rem;
     color: var(--grijs);
@@ -226,8 +225,8 @@ header nav ul li:nth-child(n+3) {
 }
 
 header nav ul li a {
-    display: flex; /* */
-    justify-content: space-between; /* */
+    display: flex; 
+    justify-content: space-between; 
     align-items: center;
     background-color: var(--lichtgrijs);
     color: var(--zwart);
@@ -242,18 +241,18 @@ header nav ul li a {
 header nav ul li a::after {
     content: '→';
     color: var(--zwart);
-    background-color: var(--wit); /* */
+    background-color: var(--wit); 
     font-weight: bold;
-    display: inline-flex; /* */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.2rem; /* */
+    width: 2.2rem; 
     height: 2.2rem;
     border-radius: 4px;
     font-size: 1.1rem;
 }
 
-/* Behoud van je bestaande article styling */
+/* zelfde als pagina 1 */
 header article {
     position: relative;
     margin-top: 75vh;
@@ -320,8 +319,8 @@ header article a::after {
     right: 1.5rem;
     top: 0.5rem;
     right: 0.5rem;
-    background-color: white;
-    color: #cc0000;
+    background-color: var(--wit);
+    color: var(var(--rood));
     width: 20px;
     height: 20px;
     border-radius: 2px;
@@ -332,7 +331,8 @@ header article a::after {
     font-size: 1rem;
 }
 
-/* section 1 het eerste met knop */
+/* section 1
+ het eerste met knop */
 section:first-of-type {
     margin-left: 1rem;
         margin-right: 1rem;
@@ -514,7 +514,7 @@ section:nth-of-type(4) img:hover {
     filter: brightness(1.2);  
 }
 
-/* section 5 foto video */
+/* section 5 foto en video */
 section:nth-of-type(5) {
     display: flex;
     flex-direction: column;
@@ -614,7 +614,7 @@ section:nth-of-type(6) article img {
     z-index: 0;
 }
 
-/* overlaay*/
+/* overlaay van de afbeelding*/
 section:nth-of-type(6) article::after {
     content: "";
     position: absolute;
@@ -622,7 +622,7 @@ section:nth-of-type(6) article::after {
     left: 0;
     width: 100%;
     height: 60%;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); /*hulp van https://chatgpt.com/ */
     z-index: 1;
     pointer-events: none;
 }
@@ -653,7 +653,7 @@ section:nth-of-type(6) article p {
 }
 
 
-/* section 7 at pro boot --- */
+/* section 7 at pro boot  */
 section:nth-of-type(7) {
     color: white;
     padding: 0 1.25rem 3rem 1.25rem;
@@ -667,7 +667,7 @@ section:nth-of-type(7) img {
 }
 
 section:nth-of-type(7) h3 {
-    color: #ffffff;
+    color: var(--wit);
     font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -691,7 +691,7 @@ section:nth-of-type(7) h2 {
 }
 
 section:nth-of-type(7) p {
-    color: #b8b8b8;
+    color: var(--grijs);
     font-size: 0.9rem;
     font-weight: 300;
     line-height: 1.6;
@@ -701,8 +701,8 @@ section:nth-of-type(7) p {
 
 /* full specs section 8 */
 section:nth-of-type(8) {
-    background-color: black;
-    color: white;
+    background-color: var(--zwart);
+    color: var(--wit);
     padding: 0 1.5rem; 
     display: flex;
     flex-direction: column;
@@ -713,7 +713,7 @@ section:nth-of-type(8) {
 section:nth-of-type(8) > section,
 section:nth-of-type(8) details {
     padding: 1rem 0;          
-    border: none; /* Alle lijnen weggehaald */
+    border: none; 
     width: 100%;
 }
 
@@ -729,7 +729,7 @@ section:nth-of-type(8) h2 {
     text-align: left; /* De titels blijven wel links staan */
 }
 
-/* -de uitklap summeray */
+/* -de uitklap summeray die zorgt er voor dat ik het in en uit kan klappen */
 section:nth-of-type(8) summary {                /*https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details*/
     list-style: none;                           /* Ik heb opgezocht hoe ik elementent kan in en uit klikken met alleen css en dan kom je op de summary tag */
     display: flex;                              /* Ik heb chapgpt.com gevraag hoe je dit zou kunnen toepassen*/
@@ -761,15 +761,13 @@ section:nth-of-type(8) table {
     width: 100%;
     margin-top: 0;
     border-collapse: collapse;
-    
-    /* Gecentreerde tekst zoals op screenshot */
     text-align: center; 
     
     font-size: 0.9rem;
     animation: verschijnen 0.5s ease;
 }
 
-/* --- TABEL KOPJES (WIT & DIK) --- */
+/* tabel en kopjes */
 section:nth-of-type(8) thead th {
     border: none; 
     padding: 0.5rem 0;
@@ -779,7 +777,7 @@ section:nth-of-type(8) thead th {
     color: white;     
 }
 
-/* --- TABEL DATA (GRIJS) --- */
+/* de data in het grijs */
 section:nth-of-type(8) tbody td {
     border: none; 
     padding: 0.3rem 0; 
@@ -868,7 +866,7 @@ section:nth-of-type(10) {
     box-sizing: border-box; 
 }
 
-/*  De Titel Where to find us  */       /*zet bronnen nog neer!*/
+/*  De Titel Where to find us  */       
 section:nth-of-type(10) > h3 {
     color: var(--wit);      
     margin: 0 0 2.8rem 0;   
@@ -908,8 +906,6 @@ section:nth-of-type(10) article::after {
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* Het verloopje van zwart (onder) naar doorzichtig (midden) zodat tekst leesbaar is */
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 50%);
     
     z-index: 2;             
@@ -938,7 +934,7 @@ footer {
 }
 
 footer h4 {
-    color: #888;
+    color: var(--grijs);
     font-size: 0.8rem;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
@@ -966,11 +962,12 @@ footer a {
     font-size: 0.8rem;
 }
 
+/*dit is de knop voor engels */
 footer select {
     width: 100%;
     background-color: var(--zwart);
     color: var(--wit);
-    border: 1px solid #444;
+    border: 1px solid var(--grijs);
     padding: 0.8rem;
     font-size: 1rem;
     margin-bottom: 2rem;
@@ -1016,13 +1013,13 @@ footer p {
 
 @media (min-width: 900px) {
 
-
+/*dit was copy paste */
     /* Verberg de hamburgerknoppen op PC */
     #open-menu, #sluit-menu {
         display: none;
     }
 
-    /* Reset de navigatiebalk layout */
+
     header nav {
         justify-content: flex-start; /* Logo en links naast elkaar links */
         gap: 3rem;
@@ -1050,7 +1047,7 @@ footer p {
         display: none;
     }
 
-    /* Reset links naar strakke witte tekst */
+    /*zet de links in witte tekst link boven */
     header nav ul li a {
         background: none;
         color: var(--wit);
@@ -1058,7 +1055,7 @@ footer p {
         font-size: 0.8rem;
     }
 
-    /* Verberg het pijl-blokje op PC */
+    /* Verberg het pijl-blokje op pc */
     header nav ul li a::after {
         display: none;
     }
@@ -1066,21 +1063,21 @@ footer p {
     header article {
         position: relative;
         width: 100%;
-        height: 100vh; /* De article beslaat nu de hele video-hoogte */
+        height: 100vh; 
         max-width: none;
         left: 0;
         margin: 0;
         padding: 0 5.5rem;
     }
 
-    /* plaatste de tekst links hoger --- */
+    /* tekst links bovoen */
     header article > p:first-of-type,
     header article h2 {
         position: absolute;
         left: 5.5rem;
     }
 
-    /* De grijze balk (Kort) */
+    /* de grijze balk */
     header article > p:first-of-type {
         top: 30vh; 
         width: fit-content;
@@ -1091,7 +1088,7 @@ footer p {
         border-radius: 2px;
     }
 
-    /* De titel PRO BOOT */
+    /* De titel proboot */
     header article h2 {
         top: calc(35vh + 1.5rem); 
         font-size: 2.8rem;
@@ -1099,7 +1096,7 @@ footer p {
         line-height: 0.9;
     }
 
-    /* find the store rechts wordt uitgelijn --- */
+    /* find the store rechts wordt uitgelijn */
     header article a {
         position: absolute;
         right: 1rem;
@@ -1116,7 +1113,7 @@ footer p {
     }
 
 
-  /*  DE SCHOENEN */
+  /*  de schoenen */
     section:nth-of-type(4) {
         float: left;
         width: 45%;
@@ -1144,7 +1141,7 @@ footer p {
         clear: none; 
     }
 
-    /*  Specs layout in Sectie 3 --- */
+    /*  Specs layout in Sectie 3 */
     section:nth-of-type(3) {
         display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -1162,7 +1159,7 @@ footer p {
     section:nth-of-type(3) figcaption {
         display: flex;
         justify-content: space-between;
-        color: #888;
+        color: var(--grijs);
         font-size: 0.8rem;
     }
 
@@ -1173,14 +1170,14 @@ footer p {
         margin-top: 1rem;
     }
 
-    /* titel setion 1*/ /*kan naar boven */
+    /* titel setion kan naar boven */
     section:nth-of-type(1) h2 {
         font-size: 2.5rem;
         line-height: 1.1;
         margin-bottom: 1.5rem;
     }   
 
-/* ---section 5 video langer maken en img kleiner en naast elkaae met  --- */
+/* section 5 video langer maken en img kleiner en naast elkaae met */
 section:nth-of-type(5) {
     display: flex;
     flex-direction: row; 
@@ -1227,7 +1224,7 @@ section:nth-of-type(6) > h3 {
         color: var(--grijs);
     }
 
-   /* 1. dat er niks gebeurdt met de container */
+   /* dat er niks gebeurdt met de verplaatsen */
     section:nth-of-type(6) {
         width: 100%;
         padding-left: 0;
@@ -1242,7 +1239,7 @@ section:nth-of-type(6) > h3 {
         width: 100%;
     }
 
-    /* 3. de afbeeldingen in d (Article) veel breder maken */
+    /* 3. de afbeeldingen in d Articl veel breder maken */
     section:nth-of-type(6) article {
         width: 70em;         
         height: 50rem;       
@@ -1265,7 +1262,7 @@ section:nth-of-type(7) {
         align-items: end; 
     }
 
-    /* 1. DE AFBEELDING (Rechts) */
+    /* de afbeelding rechts*/
     section:nth-of-type(7) img {
         grid-column: 2;
         grid-row: 1 / span 4; /* Loopt over de hele hoogte */
@@ -1346,7 +1343,7 @@ section:nth-of-type(8) > h2 {
     }
 
     
-     /* 1. De laatste 3 afbeelding copy paste pagina 1) */
+     /*  De laatste 3 afbeelding copy paste pagina 1) */
     section:nth-of-type(10) {
         padding: 4rem 5.5rem; 
         display: grid;
@@ -1358,7 +1355,7 @@ section:nth-of-type(8) > h2 {
 
     /* 2. De Titel (H3) */
     section:nth-of-type(10) > h3 {
-        grid-column: 1 / -1;  /* Neemt de volledige breedte in boven de twee kolommen */
+        grid-column: 1 / -1;  
         margin-bottom: 2rem;
         font-size: 1rem;
         letter-spacing: 0.1em;
@@ -1366,7 +1363,7 @@ section:nth-of-type(8) > h2 {
         color: var(--wit);
     }
 
-    /* 3. de 3 afbeelding in de article */
+    /* de 3 afbeelding in de article */
     section:nth-of-type(10) article {
         height: auto; 
         margin-bottom: 0;
@@ -1387,27 +1384,28 @@ section:nth-of-type(8) > h2 {
         aspect-ratio: 2 / 0.97; 
     }
 
-    /* 4. De Tekst in de foto's */
+    /* De tekst in de afbeeldingen */
     section:nth-of-type(10) article a {
         font-size: 1.1rem;
         padding-left: 1.5rem;
         padding-bottom: 1.5rem;
     }
 
+    /* copy paste footer */
 
     footer {
-        padding: 5rem 5.5rem 3rem 5.5rem; /* Ruimte aan de zijkanten */
+        padding: 5rem 5.5rem 3rem 5.5rem; 
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr;    /* verdeling van de tekst */
+        grid-template-columns: 1fr 1fr 2fr;    
         gap: 2rem;
     }
 
     /* De social icons  */
     footer nav:nth-of-type(4) {
-        grid-column: 1 / -1;         /* Over de hele breedte van de grid */
+        grid-column: 1 / -1;         
         margin-top: 5rem;
         display: flex;
-        justify-content: space-between; /* Drukt icons links en select rechts */
+        justify-content: space-between; 
         align-items: center;            
     }
 
@@ -1423,11 +1421,11 @@ section:nth-of-type(8) > h2 {
 
     /* De engelse knop */
     footer nav:nth-of-type(4) select {
-        width: 240px;                   /* Breedte zoals op de afbeelding */
+        width: 240px;                   
         padding: 0.7rem 1rem;
         background-color: transparent;
         color: var(--wit);
-        border: 1px solid #444;        /* Het grijze randje van de afbeelding */
+        border: 1px solid #444;       
         font-family: var(--font-tekst);
         font-size: 0.85rem;
         cursor: pointer;
