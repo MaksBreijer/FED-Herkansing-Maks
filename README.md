@@ -196,8 +196,8 @@ Ik twijfelde een beetje met me html structuur, hoeveel section moet nu gaan gebr
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+ <img width="750" height="14879" alt="FireShot Capture 004 - Van Deer -  127 0 0 1" src="https://github.com/user-attachments/assets/048150a3-b1ae-4b60-ac4f-6e88d3b1b719" />
+<img width="750" height="14879" alt="FireShot Capture 004 - Van Deer -  127 0 0 1" src="https://github.com/user-attachments/assets/bdca74b9-59ec-4b2e-a654-49eab4ab1bdb" />
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
