@@ -239,6 +239,7 @@ Hier heb ik wel even mee gestoeid alleen ik ben toen opgaaz zoeken met behulp va
 
 ##### Grid
   <img src="images/grid.png" width="375px" alt="grid">
+  <img src="images/gridcss.png" width="375px" alt="grid">
 Ik vond dit eerst heel lastig, ik had gebruik gemaakt van float echter ben ik dit opgaan zoeken maar dat is hele verouderde css, Danny zei ga is kijken naar grid dat ben ik gaan, de code heb ik met behulp van Ai voor elkaar gekregen aangezien hij in de main een bepaalde grid aanspreekt. Daarna was het een kwestie van afstellen en verschuiven. Het is me alleen die gelukt om doormiddel van scrollen het plaatje mee te nemen. 
 
 #### Hamburger menu
@@ -247,6 +248,10 @@ Ik vond dit eerst heel lastig, ik had gebruik gemaakt van float echter ben ik di
 <img src="images/header nieuw.png" width="375px" alt="nieuwe header">
 
 Eerste instantie had ik gewoon simpel header met een link naar de tweede pagina, toen moest ik nog een java functie toevoegen, toen ben ik naar de Fed opdracht gegaan van Sanne, dit heeft me wel eenigszins geholpen voor dezelfde structuur. Daarna ben ik op internet gaan zoeken w3scool onder andere en met behulp van Ai, heb ik er voor gekozen om de header in classes te verdelen omdat ik toch beter overzicht kreeg. ook heb ik de nav li in de menu gezet. ook moest ik nog een keer het logo toevoegen voor het hamburger menu anders kreeg ik daar niet. Behoorlijke klus maar er is een hamburger menu. alleen heb ik niet alle content in het hamburger menu gekregen, wel heb ik het responsive gekregen. Best onderschat dit onderdeel ben er uiteindelijk echt nog lang mee bezig geweest. 
+
+<video autoplay muted loop playsinline>
+			<source src="images/gridbewegen.mov" type="video/mov">
+		</video>
 
 </details>
 
