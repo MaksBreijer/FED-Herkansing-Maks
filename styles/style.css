@@ -27,6 +27,7 @@ video {
      --lichtgrijs:#f7f7f7;
     --donker-blauw: #2c3e50;
     --lijntje: rgba(255, 255, 255, 0.2);
+    --lijntje2: rgba(255, 255, 255, 0.289);
     --font-titel: "gotham", sans-serif;
     --font-tekst: Arial, Helvetica, sans-serif;
 }
@@ -296,7 +297,8 @@ header article h2 {
 header article>a {
     display: inline-flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: solid, var(--lijntje);
     padding: 1rem;
     width: 100%;
     text-decoration: none;
@@ -317,7 +319,7 @@ header article>a::after {
 
 /* Tekst in de blok */
 header article h3 {
-    color: var(--donker-blauw);
+    color: var(--wit);
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -327,7 +329,7 @@ header article h3 {
 }
 
 header article>a>p {
-    color: var(--grijs);
+    color: var(--lichtgrijs);
     font-size: 0.7rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;

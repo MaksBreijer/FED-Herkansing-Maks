@@ -196,7 +196,10 @@ Ik twijfelde een beetje met me html structuur, hoeveel section moet nu gaan gebr
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images/eerstepagina.png" width="375px" alt="De eerste pagina">
+<img src="images/tweedepagina.png" width="375px" alt="De tweede pagina">
+<img src="images/Hamburgermenu.png" width="375px" alt="Hamburger menu">
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
