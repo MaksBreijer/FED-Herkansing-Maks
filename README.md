@@ -149,7 +149,9 @@ Ik twijfelde een beetje met me html structuur, hoeveel section moet nu gaan gebr
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  <img src="images/Frame 1.png" width="375px" alt="html afbeelding">
+  Er is voor groot deel hetzelfde gebleven sommmige dingen zijn positief uitgepakt.
 
 </details>
 
