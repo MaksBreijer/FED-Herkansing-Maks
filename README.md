@@ -250,14 +250,14 @@ Ik vond dit eerst heel lastig, ik had gebruik gemaakt van float echter ben ik di
 Eerste instantie had ik gewoon simpel header met een link naar de tweede pagina, toen moest ik nog een java functie toevoegen, toen ben ik naar de Fed opdracht gegaan van Sanne, dit heeft me wel eenigszins geholpen voor dezelfde structuur. Daarna ben ik op internet gaan zoeken w3scool onder andere en met behulp van Ai, heb ik er voor gekozen om de header in classes te verdelen omdat ik toch beter overzicht kreeg. ook heb ik de nav li in de menu gezet. ook moest ik nog een keer het logo toevoegen voor het hamburger menu anders kreeg ik daar niet. Behoorlijke klus maar er is een hamburger menu. alleen heb ik niet alle content in het hamburger menu gekregen, wel heb ik het responsive gekregen. Best onderschat dit onderdeel ben er uiteindelijk echt nog lang mee bezig geweest. 
 
 #### Scrollen
-
-<video src="images/videoscherm.mp4" width="60%" controls></video>
-hallo hallo 
-
+  <img src="images/grid.png" width="375px" alt="grid">
+Het is mij niet gelukt om dit scrollende te maken tijd te kort en ik wilde me meer focussen op de responsive.
 </details>
 
+#### Header balk vastzetten tijdens scrollen
 
-
+  <img src="images/header scroll.png" width="375px" alt="grid">
+  Het is mij niet gelukt om de header vast te zetten tijdens het scrollen had ik wel graag willen doen maar ik zat erg in tijdsnood. 
 
 
 ## Bronnenlijst
