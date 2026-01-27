@@ -212,14 +212,22 @@ Ik twijfelde een beetje met me html structuur, hoeveel section moet nu gaan gebr
   zoals in de header heb ik een hamburger menu toegevoegd, deze moest worden aangepast met onder andere 
   classes.
 
+  #### Swiper afbeelding
+
 <img src="images/swiper.png" width="375px" alt="swiper afbeelding">
 De swiper had ik eerst per section gedaan toen ik dat vertelde kreeg ik de vraag waarom heb je eigenlijk niet gekozen om hier een class voor aan te maken, dat heb ik toen gedaan dus ik heb een swiper class aangemaakt, dat ging verassend goed dus toen kreeg ik weer een boost om verder te gaan. Toen heb ik ook een button class aangemaakt zodat ik de buttons makkelijk kan vormgeven met de basis, sommige sections verschillen dus moest ik ze wel nog aparte padding geven. 
+
+#### Custom propperties
 
 <img src="images/custom propperties.png" width="375px" alt="custom propperties">
 In het begin ben ik hier niet mee aan de slag gegaan tot dat maja vertelde dat dit handig was, dus ik heb alles moet aanpassen aan de custom propperties, en halverwege het project natuurlijk wat dingen toevoegen, erg handig als het staat als je heel je document door moet om het te veranderen is het iets minder.
 
+#### Media query
+
 <img src="images/media query.png" width="375px" alt="media querry">
 Ik heb dit eerst wel even moeten opzoeken maar uiteindelijk als je het door hebt en je weet welke css je moet aanspreken dan is het best te doen, je maak eigenlijk bijna dubble css voor pc formaat, soms had ik wel moet met grid collums maar daar ben ik opzich wel mee uitgekomen. Best vet voor het eerst responsive gedaan.
+
+#### Data specs
 
 <img src="images/specs.png" width="375px" alt="specs value">
 <img src="images/data value.png" width="375px" alt="data">
@@ -229,11 +237,14 @@ Hier heb ik wel even mee gestoeid alleen ik ben toen opgaaz zoeken met behulp va
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
+##### Grid
   <img src="images/grid.png" width="375px" alt="grid">
 Ik vond dit eerst heel lastig, ik had gebruik gemaakt van float echter ben ik dit opgaan zoeken maar dat is hele verouderde css, Danny zei ga is kijken naar grid dat ben ik gaan, de code heb ik met behulp van Ai voor elkaar gekregen aangezien hij in de main een bepaalde grid aanspreekt. Daarna was het een kwestie van afstellen en verschuiven. Het is me alleen die gelukt om doormiddel van scrollen het plaatje mee te nemen. 
 
  <img src="images/headeroud.png" width="375px" alt="oude header">
 <img src="images/header nieuw.png" width="375px" alt="nieuwe header">
+
+#### Hamburger menu
 Eerste instantie had ik gewoon simpel header met een link naar de tweede pagina, toen moest ik nog een java functie toevoegen, toen ben ik naar de Fed opdracht gegaan van Sanne, dit heeft me wel eenigszins geholpen voor dezelfde structuur. Daarna ben ik op internet gaan zoeken w3scool onder andere en met behulp van Ai, heb ik er voor gekozen om de header in classes te verdelen omdat ik toch beter overzicht kreeg. ook heb ik de nav li in de menu gezet. ook moest ik nog een keer het logo toevoegen voor het hamburger menu anders kreeg ik daar niet. Behoorlijke klus maar er is een hamburger menu. alleen heb ik niet alle content in het hamburger menu gekregen, wel heb ik het responsive gekregen. Best onderschat dit onderdeel ben er uiteindelijk echt nog lang mee bezig geweest. 
 
 </details>
