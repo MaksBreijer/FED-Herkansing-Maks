@@ -215,7 +215,11 @@ Ik twijfelde een beetje met me html structuur, hoeveel section moet nu gaan gebr
 <img src="images/swiper.png" width="375px" alt="swiper afbeelding">
 De swiper had ik eerst per section gedaan toen ik dat vertelde kreeg ik de vraag waarom heb je eigenlijk niet gekozen om hier een class voor aan te maken, dat heb ik toen gedaan dus ik heb een swiper class aangemaakt, dat ging verassend goed dus toen kreeg ik weer een boost om verder te gaan. Toen heb ik ook een button class aangemaakt zodat ik de buttons makkelijk kan vormgeven met de basis, sommige sections verschillen dus moest ik ze wel nog aparte padding geven. 
 
-<img src="images/custom propperties.png" width="375px" alt="swiper afbeelding">
+<img src="images/custom propperties.png" width="375px" alt="custom propperties">
+In het begin ben ik hier niet mee aan de slag gegaan tot dat maja vertelde dat dit handig was, dus ik heb alles moet aanpassen aan de custom propperties, en halverwege het project natuurlijk wat dingen toevoegen, erg handig als het staat als je heel je document door moet om het te veranderen is het iets minder.
+
+<img src="images/media query.png" width="375px" alt="media querry">
+Ik heb dit eerst wel even moeten opzoeken maar uiteindelijk als je het door hebt en je weet welke css je moet aanspreken dan is het best te doen, je maak eigenlijk bijna dubble css voor pc formaat, soms had ik wel moet met grid collums maar daar ben ik opzich wel mee uitgekomen. Best vet voor het eerst responsive gedaan.ß
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
